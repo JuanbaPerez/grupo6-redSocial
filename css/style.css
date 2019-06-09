@@ -71,18 +71,20 @@ width:270px;
   line-height: 50px;
   text-decoration: none;
   height: 50px;
-  margin-top: 20px;
-  margin-bottom:20px;
+  margin: 20px 0 0;
 	border:none;
 	cursor: pointer;
-  margin-left: 23px;
+
 }
 
 .loginbutton:hover{
 	background-color:#e5bf05;
 }
 
-
+.link{
+display: block;
+  margin-top: 20px;
+}
 
 
 
@@ -129,7 +131,7 @@ width:270px;
   background-color: #B0C4DE;
   width: 30%;
   margin: 0 auto;
-  margin-top: 50px;
+
   border-radius: 20px;
 }
 
