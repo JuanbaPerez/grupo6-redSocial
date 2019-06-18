@@ -73,6 +73,29 @@ main h2 a {
   background-color: skyblue;
 }
 
+.buttonHome {
+  margin-top: 50px;
+}
+
+.titleHome {
+  margin: 0 auto;
+  width: 300px;
+  height: 50px;
+
+  color: grey;
+  border-radius: 10px;
+
+
+}
+
+.titleHome h1 {
+  font-size: 40px;
+  text-decoration: overline;
+  
+}
+
+
+
 main div.textHome h3 {
 
   width: 60%;
