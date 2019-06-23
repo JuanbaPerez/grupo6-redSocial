@@ -11,13 +11,11 @@
 <body>
 
 
-  <div class="sidebar">
-  <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="contact.html"><i class="fa fa-at"></i> Contact</a>
-  <a href="login.html"><i class="fa fa-fw fa-user"></i> Log In</a>
-  <a href="registration.html"><i class="fa fa-bullseye"></i> Register</a>
-  <a href="FAQ.html"><i class="fa fa-question"></i>  FAQ</a>
-  </div>
+  <?php
+
+    include_once ("php/sidebar.php")
+
+   ?>
 
 <div class="photoContainer">
   <img src="../img/logo.png" alt="logo">
