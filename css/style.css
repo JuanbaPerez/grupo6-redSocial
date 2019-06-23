@@ -28,6 +28,23 @@ font-family: georgia;
 
 }
 
+
+
+/************************
+ERROR
+***********************/
+
+p.errors {
+  font-size:12px;
+  padding: 12px;
+  color: #d81e5b;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+
 /************************
 BARRA DE NAVEGACION
 /************************
@@ -294,7 +311,9 @@ color: white;
 
 
 
-/* FOOTER*/
+/*************
+ FOOTER
+**************/
 .footer-distributed{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
