@@ -25,7 +25,7 @@
           </div>
 
           <p class="username">User name</p>
-          <p class="ago">20 minutes</p>
+          <p class="ago">20 minutes ago..</p>
       </div>
         <div class="postimg">
           <img src="../img/nochefotos.jpg" alt="postimg">
@@ -45,9 +45,45 @@
           </div>
           <div class="comments">
               <ul>
-                  <li>Wow</li>
-                  <li>Amazing</li>
-                  <li>Love this!</li>
+                  <li>Comentarios..</li>
+
+              </ul>
+          </div>
+
+  </article>
+</main>
+<main>
+  <article>
+      <div class="post-header">
+          <div class="profilepicture">
+
+            <img src="../img/franky.jpg" alt="">
+
+          </div>
+
+          <p class="username">User name</p>
+          <p class="ago">15 minutes ago..</p>
+      </div>
+        <div class="postimg">
+          <img src="../img/pantano.jpg" alt="postimg">
+
+        </div>
+
+
+<div class="posticons">
+<i class="fa fa-heart"></i>
+<i class="fa fa-comment"></i>
+
+
+</div>
+
+
+<div class="post-footer">
+          </div>
+          <div class="comments">
+              <ul>
+                  <li>Comentarios..</li>
+
               </ul>
           </div>
 
