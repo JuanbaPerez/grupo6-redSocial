@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>HOME | LOGFOTO</title>
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <title>HOME | MyFuture</title>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 
 <main>
   <div class="titleHome">
-    <h1>LOGFOTO</h1>
+    <h1>MyFuture</h1>
 
   </div>
 
