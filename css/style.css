@@ -2,6 +2,13 @@
 /***************************
       ESTILOS GENERALES
 ****************************/
+:root {
+  --primary-color: #a3c2c2;
+  --titleButton-color: #527a7a;
+  --submitButton-color: #94b894;
+  --titleBorderHome-color: #669999;
+}
+
 
 *{
   box-sizing: border-box;
@@ -21,10 +28,42 @@ a {
 
 body{
 
-background-color: #2c3335;
+background-color: var(--primary-color);
 text-align: center;
 font-family: georgia;
 
+
+}
+
+.title h2 {
+  margin: 0 auto;
+  width: 200px;
+  color: black;
+  background-color: var(--titleButton-color);
+  font-size: 23px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.buttonPages{
+
+  background-color: var(--submitButton-color);
+  border-radius: 5px/5px;
+  color: #333;
+  display: inline-block;
+  font-family: georgia;
+  font-size: 18px;
+  font-weight: bold;
+  width: 270px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  height: 50px;
+  margin: 20px 0 0;
+	border:none;
+	cursor: pointer;
+  padding-bottom: 60px;
 
 }
 
@@ -84,10 +123,10 @@ BARRA DE NAVEGACION
 
 main h2 a {
   color: black;
-  border: 1px solid black;
+  border: 1px solid var(--titleBorderHome-color);
   border-radius: 5px;
   padding: 10px;
-  background-color: skyblue;
+  background-color: var(--submitButton-color);
 }
 
 .buttonHome {
@@ -99,15 +138,19 @@ main h2 a {
   width: 300px;
   height: 50px;
 
-  color: grey;
+  color: #3d5c5c;
   border-radius: 10px;
+
 
 
 }
 
 .titleHome h1 {
-  font-size: 40px;
-  text-decoration: overline;
+  font-size: 50px;
+  border-left: 4px solid var(--titleBorderHome-color);
+  border-right: 4px solid var(--titleBorderHome-color);
+  border-radius: 30px;
+
 
 }
 
@@ -142,16 +185,7 @@ width:270px;
 
 }
 
-.title h2 {
-  margin: 0 auto;
-  width: 200px;
-  color: black;
-  background-color: #B0C4DE;
-  font-size: 23px;
-  text-align: center;
-  border-radius: 5px;
-  padding: 20px;
-}
+
 
 /***************************
       Contact
@@ -178,26 +212,6 @@ width:270px;
       LOGIN
 ****************************/
 
-.loginbutton{
-
-  background-color: #ffdd00;
-  border-radius: 5px/5px;
-  color: #333;
-  display: inline-block;
-  font-family: georgia;
-  font-size: 18px;
-  font-weight: bold;
-  width: 270px;
-  text-align: center;
-  line-height: 50px;
-  text-decoration: none;
-  height: 50px;
-  margin: 20px 0 0;
-	border:none;
-	cursor: pointer;
-  padding-bottom: 60px;
-
-}
 
 .loginbutton:hover{
 	background-color:#e5bf05;

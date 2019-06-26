@@ -58,7 +58,7 @@
 
 </label>
 
-<button type="button" class="loginbutton" name="button">Submit</button>
+<button type="button" class="buttonPages" name="button">Submit</button>
 
 
 </form>

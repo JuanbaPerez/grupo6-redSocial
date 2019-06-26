@@ -35,7 +35,7 @@
   </div>
 
 <div class="buttonHome">
-  <h2><a href="registration.html">Get Started</a></h2>
+  <h2><a href="registration.php">Get Started</a></h2>
 
 </div>
 

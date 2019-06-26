@@ -127,7 +127,7 @@ if ($_POST) {
 
 
 
-<button type="submit" class="loginbutton" name="button">Registrer!</button>
+<button type="submit" class="buttonPages" name="button">Registrer!</button>
 
 </form>
 

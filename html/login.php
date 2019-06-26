@@ -42,7 +42,7 @@
 
 <br>
 
-<button type="button" class="loginbutton" name="button">Login</button>
+<button type="button" class="buttonPages" name="button">Login</button>
 
 </form>
 
