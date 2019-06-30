@@ -11,6 +11,14 @@
 </head>
 
   <body>
+
+    <?php
+
+    include_once ("php/sidebar.php");
+
+     ?>
+
+
     <div class="containerUser">
 
     <div class="card">
@@ -40,5 +48,12 @@
 
 
   </div>
+
+
+  <?php
+
+  include_once ("php/footer.php");
+
+   ?>
   </body>
 </html>

@@ -40,31 +40,55 @@
 
     <div class="search-friends">
 
-    Search friends
+    <a href="#">Search friends</a>
 
     </div>
 
-    <div class="franky-image">
+    <div class="friendsPhotos">
 
-      <img src="../img/franky.jpg" alt="friendsimg">
+      <div class="friendsImage">
+
+        <img src="../img/franky.jpg" alt="friendsimg">
+        <p>Franky</p>
+
+      </div>
+
+      <div class="friendsImage">
+        <img src="../img/paco.jpg" alt="friendsimg">
+        <p>paquito</p>
+
+      </div>
+
+      <div class="friendsImage">
+        <img src="../img/profilepic.jpg" alt="friendsimg">
+        <p>swagger</p>
+
+      </div>
+
+      <div class="friendsImage">
+        <img src="../img/paco.jpg" alt="friendsimg">
+        <p>paquito</p>
+
+      </div>
+
+      <div class="friendsImage">
+
+        <img src="../img/franky.jpg" alt="friendsimg">
+        <p>Franky</p>
+
+      </div>
+
+      <div class="friendsImage">
+        <img src="../img/profilepic.jpg" alt="friendsimg">
+        <p>swagger</p>
+
+      </div>
+
+
+
 
     </div>
 
-    <div class="paco-image">
-      <img src="../img/paco.jpg" alt="friendsimg">
-
-    </div>
-
-    <div class="swag-image">
-      <img src="../img/profilepic.jpg" alt="friendsimg">
-
-    </div>
-
-    <div class="paco-name">
-
-    Paco Amoroso
-
-    </div>
 
     </div>
 

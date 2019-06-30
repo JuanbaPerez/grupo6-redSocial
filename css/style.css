@@ -278,7 +278,9 @@ main div.textHome {
     margin-left: 5px;
   }
 
-  /* FRIENDS */
+  /********************
+  FRIENDS
+  **********************/
 
   div.friends-box{
   display: block;
@@ -319,7 +321,24 @@ main div.textHome {
 
   }
 
-  div.franky-image img{
+  div.friendsPhotos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 70px;
+
+  }
+
+  div.friendsImage {
+
+
+  }
+
+  div.friendsImage img {
+    width: 130px;
+  }
+
+/*  div.franky-image img{
     display: block;
     position: absolute;
     width: 130px;
@@ -348,7 +367,7 @@ main div.textHome {
     margin-left: 320px;
 
   }
-
+*/
   div.paco-name{
   display: block;
   position: absolute;
@@ -714,6 +733,7 @@ display: none;
 div.friends-box{
 
   display: block;
+  border-radius: 5px;
 }
 
 
