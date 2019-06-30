@@ -9,14 +9,65 @@
 </head>
 
 
+
   <body>
+
+
+
+
     <header>
+
       <?php
 
         include_once ("php/sidebar.php")
 
        ?>
     </header>
+
+    <div class="friends-box">
+
+
+
+    <div class="icon-image">
+
+    <i class="fa fa-users"></i>
+    </div>
+
+    <div class="textFriends">
+
+      Friends - 20
+    </div>
+
+    <div class="search-friends">
+
+    Search friends
+
+    </div>
+
+    <div class="franky-image">
+
+      <img src="../img/franky.jpg" alt="friendsimg">
+
+    </div>
+
+    <div class="paco-image">
+      <img src="../img/paco.jpg" alt="friendsimg">
+
+    </div>
+
+    <div class="swag-image">
+      <img src="../img/profilepic.jpg" alt="friendsimg">
+
+    </div>
+
+    <div class="paco-name">
+
+    Paco Amoroso
+
+    </div>
+
+    </div>
+
 
 <main>
 

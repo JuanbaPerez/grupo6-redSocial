@@ -278,6 +278,84 @@ main div.textHome {
     margin-left: 5px;
   }
 
+  /* FRIENDS */
+
+  div.friends-box{
+  display: block;
+  position: fixed;
+    background-color: white;
+  width: 500px;
+  height: 500px;
+  margin-left: 150px;
+  margin-top: 236px;
+
+  }
+
+  div.icon-image{
+  display: block;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  }
+
+  div.textFriends{
+
+  display: block;
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 5px;
+
+
+  }
+
+  div.search-friends{
+
+  display: block;
+  position: absolute;
+  margin-left: 390px;
+  font-size: 15px;
+  margin-top: 5px;
+
+
+  }
+
+  div.franky-image img{
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+
+  div.paco-image img{
+
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  margin-top: 50px;
+  margin-left: 160px;
+
+  }
+
+  div.swag-image img{
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    margin-top: 50px;
+    margin-left: 320px;
+
+  }
+
+  div.paco-name{
+  display: block;
+  position: absolute;
+  margin-top: 190px;
+  margin-left: 173px;
+
+  }
 
 
 
@@ -556,7 +634,23 @@ color: white;
       MEDIA QUIRES
 ****************************/
 
+@media screen and (max-width: 600px){
+
+div.friends-box{
+
+  display: none;
+}
+
+}
+
 @media screen and (min-width: 600px) {
+
+div.friends-box {
+
+display: none;
+
+}
+
   .postContainer {
     width: 100%;
     height: 600px;
@@ -616,6 +710,13 @@ color: white;
   width: 100%;
 
   }
+
+div.friends-box{
+
+  display: block;
+}
+
+
 }
 
 /* TODO: FIX THIS LATER ESTA EN MAX WIDTH PORQUE ESTA BARRA PRIMERO ESTA HECHO CON MOBILE-LAST */
