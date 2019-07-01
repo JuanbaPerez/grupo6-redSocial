@@ -142,15 +142,15 @@ if ($_POST) {
   <div class="footer-left">
 
     <p class="footer-links">
-      <a href="home.html">Home</a>
+      <a href="home.php">Home</a>
       ·
-      <a href="contact.html">Contact us</a>
+      <a href="contact.php">Contact us</a>
       ·
-      <a href="login.html">Log In</a>
+      <a href="login.php">Log In</a>
       ·
-      <a href="registration.html">Registrer</a>
+      <a href="registration.php">Registrer</a>
       ·
-      <a href="FAQ.html">Faq</a>
+      <a href="FAQ.php">Faq</a>
     </p>
 
     <p class="footer-company-name">LogFoto &copy; 2019</p>
