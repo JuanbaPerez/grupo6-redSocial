@@ -5,7 +5,7 @@
 :root {
   --primary-color: #a3c2c2;
   --titleButton-color: #527a7a;
-  --submitButton-color: #94b894;
+  --submitButton-color:#8448c4;
   --titleBorderHome-color: #669999;
 }
 
@@ -15,6 +15,7 @@
   font-family: sans-serif;
 }
 
+
 .photoContainer img {
   display: block;
   margin: 0 auto;
@@ -23,7 +24,7 @@
 
 a {
   text-decoration: none;
-  color: grey;
+
 }
 
 body{
@@ -31,7 +32,14 @@ body{
 background-color: var(--primary-color);
 text-align: center;
 font-family: georgia;
+  background-image: url(../img/ola.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
+/* background-attachment: fixed;
+  background-repeat: no-repeat;
+*/
 
 }
 
@@ -39,11 +47,12 @@ font-family: georgia;
   margin: 0 auto;
   width: 200px;
   color: black;
-  background-color: var(--titleButton-color);
-  font-size: 23px;
+font-style: italic;
+  font-size: 30px;
   text-align: center;
   border-radius: 5px;
   padding: 20px;
+  font-weight: bolder;
 }
 
 .buttonPages{
@@ -123,7 +132,7 @@ BARRA DE NAVEGACION
 
 main h2 a {
   color: black;
-  border: 1px solid var(--titleBorderHome-color);
+
   border-radius: 5px;
   padding: 10px;
   background-color: var(--submitButton-color);
@@ -139,7 +148,7 @@ main h2 a {
   width: 300px;
   height: 50px;
 
-  color: #3d5c5c;
+  color: black;
   border-radius: 10px;
 
 
@@ -148,8 +157,8 @@ main h2 a {
 
 .titleHome h1 {
   font-size: 50px;
-  border-left: 4px solid var(--titleBorderHome-color);
-  border-right: 4px solid var(--titleBorderHome-color);
+  border-left: 4px solid black;
+  border-right: 4px solid black;
   border-radius: 30px;
 
 
@@ -175,6 +184,9 @@ main div.textHome {
 /***************************
       HOME POST
 ****************************/
+
+
+
 
   .postContainer {
     background-color: white;
@@ -424,6 +436,7 @@ width:270px;
 ****************************/
 
 
+
 .loginbutton:hover{
 	background-color:#e5bf05;
 }
@@ -456,6 +469,7 @@ display: block;
   display: block;
   margin: 0 auto;
   width: 50%;
+  font-weight: bold;
 
 }
 

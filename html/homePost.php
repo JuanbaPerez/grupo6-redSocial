@@ -49,38 +49,38 @@
       <div class="friendsImage">
 
         <img src="../img/franky.jpg" alt="friendsimg">
-        <p>Franky</p>
+        <p>Franky Style</p>
 
       </div>
 
       <div class="friendsImage">
         <img src="../img/paco.jpg" alt="friendsimg">
-        <p>paquito</p>
+        <p>Paco Amoroso</p>
 
       </div>
 
       <div class="friendsImage">
         <img src="../img/profilepic.jpg" alt="friendsimg">
-        <p>swagger</p>
+        <p>Swagger Lee</p>
 
       </div>
 
       <div class="friendsImage">
         <img src="../img/paco.jpg" alt="friendsimg">
-        <p>paquito</p>
+        <p>Paco Amoroso</p>
 
       </div>
 
       <div class="friendsImage">
 
         <img src="../img/franky.jpg" alt="friendsimg">
-        <p>Franky</p>
+        <p>Franky Style</p>
 
       </div>
 
       <div class="friendsImage">
         <img src="../img/profilepic.jpg" alt="friendsimg">
-        <p>swagger</p>
+        <p>Swagger Leee</p>
 
       </div>
 
