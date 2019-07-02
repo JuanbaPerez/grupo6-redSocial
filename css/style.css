@@ -190,8 +190,7 @@ main div.textHome {
 
   .postContainer {
     background-color: white;
-    width: 378px;
-    height: 540px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
     border-radius: 10px;
@@ -238,8 +237,7 @@ main div.textHome {
 
   .postImage img{
     display: block;
-    position: absolute;
-    width: 378px;
+    width: 100%;
     margin-top: 10px;
 
 
@@ -252,7 +250,6 @@ main div.textHome {
     display: flex;
     flex-direction: row;
 
-    margin-top: 250px;
 
   }
 
@@ -290,9 +287,7 @@ main div.textHome {
     margin-left: 5px;
   }
 
-  /********************
-  FRIENDS
-  **********************/
+  /********************  FRIENDS: ;**********************/
 
   div.friends-box{
   display: block;
@@ -350,36 +345,7 @@ main div.textHome {
     width: 130px;
   }
 
-/*  div.franky-image img{
-    display: block;
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    margin-top: 50px;
-    margin-left: 10px;
-  }
 
-  div.paco-image img{
-
-  display: block;
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  margin-top: 50px;
-  margin-left: 160px;
-
-  }
-
-  div.swag-image img{
-    display: block;
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    margin-top: 50px;
-    margin-left: 320px;
-
-  }
-*/
   div.paco-name{
   display: block;
   position: absolute;
@@ -686,11 +652,11 @@ display: none;
 
   .postContainer {
     width: 100%;
-    height: 600px;
+
   }
 
   div.postImage {
-    position: absolute;
+
     width: 100%;
 
 
@@ -732,11 +698,11 @@ display: none;
     margin-top: 0;
     width: 50%;
     margin-right: 15px;
-    height: 850px;
+
   }
 
   .postIcons {
-    margin-top: 480px;
+
   }
 
   .postImage img {
