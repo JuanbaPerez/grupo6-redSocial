@@ -38,36 +38,12 @@
   </div>
 
 
-  <footer class="footer-distributed">
 
-    <div class="footer-left">
+  <?php
 
-      <p class="footer-links">
-        <a href="home.php">Home</a>
-        ·
-        <a href="contact.php">Contact us</a>
-        ·
-        <a href="login.php">Log In</a>
-        ·
-        <a href="registration.php">Registrer</a>
-        ·
-        <a href="FAQ.php">Faq</a>
-      </p>
+    include_once ("php/footer.php")
 
-      <p class="footer-company-name">LogFoto &copy; 2019</p>
-
-    </div>
-
-    <div class="footer-right">
-
-      <form method="get" action="#">
-        <input placeholder="Search our website" name="search" />
-        <i class="fa fa-search"></i>
-      </form>
-
-    </div>
-
-  </footer>
+   ?>
 
 
 </body>

@@ -18,7 +18,7 @@
 .photoContainer img {
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 a {
@@ -177,7 +177,7 @@ main div.textHome {
 ****************************/
 
   .postContainer {
-    background-color: white;
+    background-color: blue;
     width: 378px;
     height: 540px;
     margin: 0 auto;
@@ -278,14 +278,12 @@ main div.textHome {
     margin-left: 5px;
   }
 
-  /********************
-  FRIENDS
-  **********************/
+  /********************    FRIENDS   **********************/
 
   div.friends-box{
   display: block;
   position: fixed;
-    background-color: white;
+  background-color: white;
   width: 500px;
   height: 500px;
   margin-left: 150px;
@@ -338,36 +336,7 @@ main div.textHome {
     width: 130px;
   }
 
-/*  div.franky-image img{
-    display: block;
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    margin-top: 50px;
-    margin-left: 10px;
-  }
 
-  div.paco-image img{
-
-  display: block;
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  margin-top: 50px;
-  margin-left: 160px;
-
-  }
-
-  div.swag-image img{
-    display: block;
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    margin-top: 50px;
-    margin-left: 320px;
-
-  }
-*/
   div.paco-name{
   display: block;
   position: absolute;
@@ -544,16 +513,12 @@ color: white;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
-
-
-
-
 	margin-top: 80px;
 	overflow: hidden;
-
   padding: 30px;
   text-align: center;
   font: bold 14px sans-serif;
+  border-radius: 3px 3px 0px 0px;
 }
 
 /* Footer left */
