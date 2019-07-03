@@ -35,7 +35,10 @@ if ($_POST) {
   $user = $_POST["user"];
   $email = $_POST["email"];
 
-
+//si no hay errores te manda al login
+  if(!$errors) {
+      header("location: login.php?name=$name");
+    }
 
 
 }
