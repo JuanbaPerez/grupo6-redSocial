@@ -80,7 +80,7 @@
 
       <div class="friendsImage">
         <img src="../img/profilepic.jpg" alt="friendsimg">
-        <p>Swagger Leee</p>
+        <p>Swagger Lee</p>
 
       </div>
 
@@ -129,14 +129,7 @@
 </div>
 
 
-  <div class="comments">
-    <hr>
-    <p><strong>Margater.jackson:</strong> NICE</p>
-    <hr>
-    <p><strong>JackieSharp:</strong> where is that?</p>
-    <hr>
-    <p><strong>Chuck-Lid:</strong> Miss you bud!</p>
-  </div>
+
 
 
   </div>
@@ -176,14 +169,7 @@
 </div>
 
 
-  <div class="comments">
-    <hr>
-    <p><strong>Glendon-Get:</strong> Awesome</p>
-    <hr>
-    <p><strong>LoneWold:</strong> is there a ghost there?</p>
-    <hr>
-    <p><strong>Gaming.gx:</strong> Creepy</p>
-  </div>
+
 
 
   </div>
@@ -222,14 +208,6 @@
 </div>
 
 
-  <div class="comments">
-    <hr>
-    <p><strong>Margater.jackson:</strong> NICE</p>
-    <hr>
-    <p><strong>JackieSharp:</strong> where is that?</p>
-    <hr>
-    <p><strong>Chuck-Lid:</strong> Miss you bud!</p>
-  </div>
 
 
   </div>
@@ -269,17 +247,7 @@
 </div>
 
 
-  <div class="comments">
-    <hr>
-    <p><strong>Glendon-Get:</strong> Awesome</p>
-    <hr>
-    <p><strong>LoneWold:</strong> is there a ghost there?</p>
-    <hr>
-    <p><strong>Gaming.gx:</strong> Creepy</p>
-  </div>
 
-
-  </div>
 
 
 
