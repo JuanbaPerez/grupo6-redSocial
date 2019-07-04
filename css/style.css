@@ -31,7 +31,7 @@ body{
 
 background-color: var(--primary-color);
 text-align: center;
-font-family: georgia;
+font-family: italic;
   background-image: url(../img/tree.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -158,10 +158,11 @@ main h2 a {
 }
 
 .titleHome h1 {
-  font-size: 50px;
+  font-size: 43px;
   border-left: 4px solid black;
   border-right: 4px solid black;
   border-radius: 30px;
+  font-family: 'Cinzel Decorative', cursive;
 
 
 }
@@ -172,6 +173,7 @@ main div.textHome h3 {
 
   width: 60%;
   margin: 0 auto;
+  font-family: 'Cinzel', serif;
 
 }
 
@@ -438,6 +440,7 @@ display: block;
   margin: 0 auto;
   width: 50%;
   font-weight: bold;
+font-family: 'Cinzel', serif;
 
 }
 
