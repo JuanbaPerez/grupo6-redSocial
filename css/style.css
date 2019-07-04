@@ -127,16 +127,7 @@ BARRA DE NAVEGACION
       HOME
 ****************************/
 
-main h2 a {
-  color: black;
 
-  border-radius: 5px;
-  padding: 10px;
-  background-color: var(--submitButton-color);
-  font-size: 19px;
-
-
-}
 
 .buttonHome {
   margin-top: 50px;
