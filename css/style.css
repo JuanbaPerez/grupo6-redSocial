@@ -450,12 +450,12 @@ font-family: 'Cinzel', serif;
 
 .card {
 display: block;
-background-color: tomato;
+background-color: lightgrey;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 400px;
-margin-left: 100px;
+margin-left: 160px;
   text-align: center;
-  margin: 0 auto;
+
   margin-top: 70px;
 
 }
@@ -490,7 +490,7 @@ button:hover, a:hover {
 
 
 div.containerUser{
-background-image: url(../img/retro.jpg);
+
 background-repeat:  no-repeat;
 background-position: center;
 background-size: cover;
