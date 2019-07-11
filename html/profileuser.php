@@ -19,6 +19,9 @@
      ?>
 
 
+
+<main class="profileUserContainer">
+
     <div class="containerUser">
 
     <div class="card">
@@ -45,9 +48,31 @@
       <a class="social" href="#"><i class="fa fa-facebook"></i></a>
     </div>
 
-
-
   </div>
+
+  <div class="postContainerProfile">
+
+      <div class="postImageProfile">
+
+        <div class="lineProfile"></div>
+
+        <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
+        <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
+        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
+        <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
+        <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
+        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
+        <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
+        <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
+        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
+
+
+    <div class="lineProfile downLineProfile"></div>
+      </div>
+  </div>
+
+
+   </main>
 
 
   <?php

@@ -73,6 +73,26 @@ font-family: 'Cormorant SC', serif;
 
 }
 
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
 
 
 /************************
@@ -263,7 +283,6 @@ main div.textHome {
   button.buttons {
     background-color: #c0c0c0;
     border-radius: 0px 0px 5px 5px;
-    margin-top: 10px;
     padding-bottom: 15px;
 
   }
@@ -448,15 +467,31 @@ font-family: 'Cinzel', serif;
       Profile User
 ****************************/
 
+div.containerUser{
+
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+}
+
 .card {
 display: block;
 background-color: lightgrey;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-margin-left: 160px;
-  text-align: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+width: 100%;
+text-align: center;
+margin-top: 90px;
 
-  margin-top: 70px;
+}
+
+div.imageUser img{
+  padding-top: 5px;
+
+
+  width: 100%;
+  border-radius: 50%;
 
 }
 
@@ -465,17 +500,10 @@ margin-left: 160px;
   font-size: 18px;
 }
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
+p.text{
+
   color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+
 }
 
 a.social {
@@ -484,34 +512,44 @@ a.social {
   color: black;
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
+
+  div.postContainerProfile {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  div.postImageProfile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+
+  }
+
+   img.postImages{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
 
 
-div.containerUser{
+  div.lineProfile {
+  border-top: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  }
 
-background-repeat:  no-repeat;
-background-position: center;
-background-size: cover;
-
-
-}
-
-div.imageUser img{
-padding-top: 5px;
+  div.downLineProfile {
+    margin-top: 12px;
+  }
 
 
-  width: 100%;
-  border-radius: 50%;
 
-}
 
-p.text{
 
-color: white;
 
-}
 
 
 
@@ -641,7 +679,9 @@ div.friends-box{
 
 }
 
-@media screen and (min-width: 600px) {
+
+
+@media screen and (min-width: 510px) {
 
 div.friends-box {
 
@@ -665,6 +705,45 @@ display: none;
   width: 100%
 
   }
+
+  /***************************
+        Profile User
+  ****************************/
+
+  main.profileUserContainer {
+    display: flex;
+
+  }
+
+  div.lineProfile {
+    display: none;
+  }
+
+
+
+
+  .containerUser {
+  width: 30%;
+
+  }
+
+  div.postContainerProfile {
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 10px;
+
+
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -714,6 +793,24 @@ div.friends-box{
   display: block;
   border-radius: 5px;
 }
+
+/*
+PROFILEUSER
+*/
+
+main.profileUserContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.postContainerProfile {
+  margin-left: 100px;
+}
+
+
+
+
+
 
 
 }
