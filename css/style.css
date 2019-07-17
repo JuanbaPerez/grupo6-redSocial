@@ -482,7 +482,7 @@ background-color: lightgrey;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 width: 100%;
 text-align: center;
-margin-top: 90px;
+margin-top: 2px;
 
 }
 
@@ -511,6 +511,7 @@ a.social {
   font-size: 22px;
   color: black;
 }
+
 
 
   div.postContainerProfile {
@@ -554,7 +555,6 @@ a.social {
   div.downLineProfile {
     margin-top: 12px;
   }
-
 
 
 
@@ -723,6 +723,7 @@ display: none;
   main.profileUserContainer {
     display: flex;
 
+
   }
 
   div.lineProfile {
@@ -739,15 +740,26 @@ display: none;
 
   div.postContainerProfile {
     width: 70%;
-    margin-top: 50px;
+    margin-top: -300px;
     margin-left: 10px;
 
 
   }
 
 
+  div.profile-Logo img{
+  display: block;
+margin-left: 300px;
+width: 350px;
 
 
+  }
+
+div.titleHome h1{
+
+  width: 100%;
+
+}
 
 
 
@@ -816,6 +828,7 @@ main.profileUserContainer {
 div.postContainerProfile {
   margin-left: 100px;
 }
+
 
 
 
