@@ -65,6 +65,8 @@
         <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
         <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
         <img class="postImages" src="../img/retro.jpg" alt="postFoto">
+        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
+        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
 
 
     <div class="lineProfile downLineProfile"></div>
