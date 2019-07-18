@@ -72,14 +72,14 @@
           <div class="buttonsContainer">
 
             <div class="img-heart">
-              <a href="#">
-                <i class="fa fa-heart"> 38</i>
+              <a href="postDetails.php">
+                <i class="fa fa-heart">38</i>
               </a>
 
             </div>
 
             <div class="img-comments">
-              <a href="#">
+              <a href="postDetails.php">
                 <i class="fa fa-comment"> 5</i>
               </a>
             </div>
