@@ -12,6 +12,14 @@
   <h1>MyFuture</h1>
   </div>
 
+<div class="StartButton">
+    <a href="../html/homePost.php">Start</a>
+</div>
+
+<div class="profileUserButton">
+    <a href="../html/profileuser.php">Profile</a>
+</div>
+
 
 <div class="onlineTitle">
     <h3>ONLINE</h3>

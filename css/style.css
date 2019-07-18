@@ -144,9 +144,13 @@ div.titleSidebar {
   border-radius: 30px;
   font-family: 'Cinzel Decorative', cursive;
   color: lightgrey;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
 
+}
+
+div.profileUserButton {
+  margin-bottom: 80px;
 }
 
 div.onlineTitle {
