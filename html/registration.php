@@ -36,7 +36,7 @@ if ($_POST) {
   $email = $_POST["email"];
 
 //si no hay errores te manda al login
-  if(!$errors) {
+  if(!$errores) {
       header("location: login.php?name=$name");
     }
 
