@@ -139,8 +139,7 @@ BARRA DE NAVEGACION
 
 div.titleSidebar {
   font-size: 12px;
-  border-left: 4px solid lightgrey;
-  border-right: 4px solid lightgrey;
+
   border-radius: 30px;
   font-family: 'Cinzel Decorative', cursive;
   color: lightgrey;
@@ -155,7 +154,7 @@ div.profileUserButton {
 
 div.onlineTitle {
   position: sticky;
-  background-color: lightgreen;
+  background-color: whitesmoke;
   width: 100%;
   border-radius: 2px;
 }
@@ -339,7 +338,7 @@ main div.textHome {
 
   .postIcons-heart {
     width: 50%;
-    border-right: 1px solid white;
+    border-right: 1px solid black;
   }
 
   .postIcons-comment {
@@ -355,6 +354,7 @@ main div.textHome {
     background-color: #c0c0c0;
     border-radius: 0px 0px 5px 5px;
     padding-bottom: 15px;
+    margin-top: 10px;
 
   }
 
@@ -573,7 +573,7 @@ div.imageUser img{
 
 p.text{
 
-  color: white;
+  color: black;
 
 }
 
@@ -598,6 +598,8 @@ a.social {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
 
   }
 
@@ -621,7 +623,7 @@ a.social {
   div.single-img img {
     display: block;
     width: 100%;
-    padding: 2px;
+    padding: 5px;
   }
 
   .img-overlay {
@@ -900,7 +902,7 @@ div.containerUser {
   .postContainer {
     margin-top: 0;
     width: 50%;
-    margin-right: 15px;
+
 
   }
 
@@ -940,9 +942,8 @@ div.containerUser {
 .title h1 {
   margin: 0 auto;
   width: 300px;
-  height: 50px;
   color: black;
-  border-radius: 10px;
+
 }
 
 

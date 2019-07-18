@@ -22,7 +22,7 @@
 
 
 <div class="onlineTitle">
-    <h3>ONLINE</h3>
+    <h3>Friends</h3>
 </div>
 
 <div class="contactsContainer">
@@ -143,9 +143,7 @@
 
           </div>
 
-    <div class="offlineTitle">
-          <h3>OFFLINE</h3>
-    </div>
+  
 
 
 <div class="contactsContainer">
