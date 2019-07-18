@@ -19,8 +19,12 @@
 
      ?>
 
-     <div class="profile-Logo">
+     <div class="photoContainer">
        <img src="../img/logo.png" alt="logo logFoto">
+
+       <div class="titleHome title">
+         <h1>MyFuture</h1>
+       </div>
 
      </div>
 
@@ -56,29 +60,143 @@
 
   <div class="postContainerProfile">
 
-    <div class="titleHome">
-      <h1>MyFuture</h1>
-
-    </div>
 
       <div class="postImageProfile">
 
-        <div class="lineProfile"></div>
+      <div class="single-img">
 
-        <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
-        <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
-        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
-        <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
-        <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
-        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
-        <img class="postImages" src="../img/nochefotos.jpg" alt="postFoto">
-        <img class="postImages" src="../img/pantano.jpg" alt="postFoto">
-        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
-        <img class="postImages" src="../img/retro.jpg" alt="postFoto">
+        <img src="../img/nochefotos.jpg" alt="postFoto">
+
+        <div class="img-overlay">
+
+          <div class="buttonsContainer">
+
+            <div class="img-heart">
+              <a href="#">
+                <i class="fa fa-heart"> 38</i>
+              </a>
+
+            </div>
+
+            <div class="img-comments">
+              <a href="#">
+                <i class="fa fa-comment"> 5</i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="single-img">
+
+        <img src="../img/retro.jpg" alt="postFoto">
+
+        <div class="img-overlay">
+
+          <div class="buttonsContainer">
+
+            <div class="img-heart">
+              <a href="#">
+                <i class="fa fa-heart"> 38</i>
+              </a>
+
+            </div>
+
+            <div class="img-comments">
+              <a href="#">
+                <i class="fa fa-comment"> 5</i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="single-img">
+
+        <img src="../img/pantano.jpg" alt="postFoto">
+
+        <div class="img-overlay">
+
+          <div class="buttonsContainer">
+
+            <div class="img-heart">
+              <a href="#">
+                <i class="fa fa-heart"> 38</i>
+              </a>
+
+            </div>
+
+            <div class="img-comments">
+              <a href="#">
+                <i class="fa fa-comment"> 5</i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="single-img">
+
+        <img src="../img/future.jpg" alt="postFoto">
+
+        <div class="img-overlay">
+
+          <div class="buttonsContainer">
+
+            <div class="img-heart">
+              <a href="#">
+                <i class="fa fa-heart"> 38</i>
+              </a>
+
+            </div>
+
+            <div class="img-comments">
+              <a href="#">
+                <i class="fa fa-comment"> 5</i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="single-img">
+
+        <img src="../img/tree.jpg" alt="postFoto">
+
+        <div class="img-overlay">
+
+          <div class="buttonsContainer">
+
+            <div class="img-heart">
+              <a href="#">
+                <i class="fa fa-heart"> 38</i>
+              </a>
+
+            </div>
+
+            <div class="img-comments">
+              <a href="#">
+                <i class="fa fa-comment"> 5</i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
 
 
-    <div class="lineProfile downLineProfile"></div>
+
+
+
+
+
+
+
       </div>
   </div>
 

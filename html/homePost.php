@@ -24,32 +24,50 @@
        ?>
     </header>
 
-    <div class="friends-box">
+    <main class="homePostBody">
+
+    <!-- <div class="friendContainer">
 
 
 
-    <div class="icon-image">
+      <div class="friends-box">
 
-    <i class="fa fa-users"></i>
-    </div>
 
-    <div class="textFriends">
 
-      Friends - 20
-    </div>
+          <div class="icon-image">
 
-    <div class="search-friends">
+            <i class="fa fa-users"></i>
+            </div>
 
-    <a href="#">Search friends</a>
+            <div class="textFriends">
 
-    </div>
+                Friends - 20
+                </div>
 
-    <div class="friendsPhotos">
+                <div class="search-friends">
+
+                  <a href="#">Search friends</a>
+
+                </div>
+
+                <div class="friendsPhotos">
+
+                  <div class="friendsImage">
+
+                    <img src="../img/franky.jpg" alt="friendsimg">
+                    <p>Franky Style</p>
+
+                  </div>
+
+                  <div class="friendsImage">
+                    <img src="../img/paco.jpg" alt="friendsimg">
+                    <p>Paco Amoroso</p>
+
+                  </div>
 
       <div class="friendsImage">
-
-        <img src="../img/franky.jpg" alt="friendsimg">
-        <p>Franky Style</p>
+        <img src="../img/profilepic.jpg" alt="friendsimg">
+        <p>Swagger Lee</p>
 
       </div>
 
@@ -60,18 +78,6 @@
       </div>
 
       <div class="friendsImage">
-        <img src="../img/profilepic.jpg" alt="friendsimg">
-        <p>Swagger Lee</p>
-
-      </div>
-
-      <div class="friendsImage">
-        <img src="../img/paco.jpg" alt="friendsimg">
-        <p>Paco Amoroso</p>
-
-      </div>
-
-      <div class="friendsImage">
 
         <img src="../img/franky.jpg" alt="friendsimg">
         <p>Franky Style</p>
@@ -92,8 +98,10 @@
 
     </div>
 
+  </div> -->
 
-<main>
+
+
 
   <div class="postContainer">
 
