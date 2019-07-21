@@ -7,12 +7,14 @@
   --titleButton-color: #527a7a;
   --submitButton-color: #d0d5e4;
   --titleBorderHome-color: #669999;
+  /* --titleFont:  */ 
 }
 
 
 *{
   box-sizing: border-box;
   font-family: sans-serif;
+
 }
 
 
@@ -672,13 +674,6 @@ a.social {
 
 
 
-
-
-
-
-
-
-
   div.lineProfile {
   border-top: 1px solid black;
   width: 50%;
@@ -690,6 +685,26 @@ a.social {
   }
 
 
+
+
+
+/*************
+   postDetail
+**************/
+
+div.commentContainer {
+
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+
+
+}
+
+div.comments {
+  border-bottom: 1px solid black;
+
+}
 
 
 
