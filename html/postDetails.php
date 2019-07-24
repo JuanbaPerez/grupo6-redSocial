@@ -33,49 +33,73 @@
       <div class="postImage">
           <img src="../img/nochefotos.jpg" alt="postFoto">
       </div>
+  <div class="details-Comments">
+    <div class="photoProfileContainer">
+      <img class="profilePicture" src="../img/profilepic.jpg" alt="profile">
+
+    <div class="details-Nick">
+      <h2>Marcelo Díaz</h2>
+      <hr>
+      <div class="Est">
+        <p>Spot en la noche.</p>
+      </div>
 
 
-  <div class="postIcons">
+</div>
 
-    <div class="postIcons-heart">
-      <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 38</i></button>
+</div>
 
     </div>
 
+<hr>
+<div class="user-Details-Container">
 
-    <div class="postIcons-comment">
+<div class="user-Image-Profile">
+  <img class="user-Image-Profile" src="../img/profilepic.jpg" alt="profile">
+</div>
 
-      <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 5</i></button>
-
-    </div>
-
-
-
+  <div class="comments-Container">
+    <h2 class="user-Name">Franky Style</h2>
+    <p class="users-Comments">WOW!</p>
   </div>
 
+</div>
 
-  <div class="commentContainer">
+<div class="user-Details-Container">
 
-      <div class="comments">
-        <!-- <img src="../img/franky.jpg" alt=""> -->
-        <p>Juanba: asd</p>
+<div class="user-Image-Profile">
+  <img class="user-Image-Profile" src="../img/profilepic.jpg" alt="profile">
+</div>
 
-      </div>
-
-      <div class="comments">
-        <p>Juanba: asd</p>
-
-      </div>
-
-      <div class="comments lastComment">
-
-        <p>Juanba: asd</p>
-      </div>
+  <div class="comments-Container">
+    <h2 class="user-Name">Homer el mero mero</h2>
+    <p class="users-Comments">AMAZING!</p>
   </div>
 
+</div>
+
+<div class="user-Details-Container">
+
+<div class="user-Image-Profile">
+  <img class="user-Image-Profile" src="../img/profilepic.jpg" alt="profile">
+</div>
+
+  <div class="comments-Container">
+    <h2 class="user-Name">C.R.O</h2>
+    <p class="users-Comments">DELUXE!</p>
+  </div>
+
+</div>
+
+</div>
 
 
-    </div>
+
+
+
+
+
+
 
     </main>
 
@@ -83,7 +107,7 @@
 
     <footer>
 
-      //include_once.
+
     </footer>
 </body>
 </html>

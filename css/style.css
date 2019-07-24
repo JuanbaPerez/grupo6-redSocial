@@ -7,7 +7,7 @@
   --titleButton-color: #527a7a;
   --submitButton-color: #d0d5e4;
   --titleBorderHome-color: #669999;
-  /* --titleFont:  */ 
+  /* --titleFont:  */
 }
 
 
@@ -372,8 +372,8 @@ main div.textHome {
 
   .comments p {
     font-size: 14px;
-    text-align: left;
-    margin-left: 5px;
+
+
   }
 
 
@@ -688,24 +688,6 @@ a.social {
 
 
 
-/*************
-   postDetail
-**************/
-
-div.commentContainer {
-
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-
-
-}
-
-div.comments {
-  border-bottom: 1px solid black;
-
-}
-
 
 
 
@@ -965,10 +947,51 @@ div.containerUser {
 
 }
 
+/*************
+   postDetail
+**************/
+
+div.details-Comments{
+
+  width: 100%;
+
+}
+div.photoProfileContainer{
+
+width: 50%;
+
+}
+div.details-Nick{
+
+margin-left: 30px;
+
+}
 
 
+.user-Details-Container {
+    display: flex;
+}
 
+.comments-Container{
 
+  display: flex;
+margin-top: 40px;
+}
+
+.user-Image-Profile {
+    width: 80px;
+    margin-left: 3px;
+    border-radius: 50px;
+}
+
+.user-Name {
+    margin-left: 20px;
+}
+
+.users-Comments {
+    margin-left: 20px;
+    padding-top: 10px;
+}
 
 
 
