@@ -73,7 +73,7 @@
 
   <div class="comments-Container">
     <h2 class="user-Name">Homer el mero mero</h2>
-    <p class="users-Comments">AMAZING!</p>
+    <p class="users-Comments">AMAZING!</p> 
   </div>
 
 </div>
@@ -90,6 +90,29 @@
   </div>
 
 </div>
+
+<hr>
+
+<section>
+
+
+  <div class="postIcons">
+
+    <div class="postIcons-heart">
+      <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 38</i></button>
+
+    </div>
+
+
+    <div class="postIcons-comment">
+
+      <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 3</i></button>
+
+    </div>
+  </div>
+
+
+</section>
 
 </div>
 

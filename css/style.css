@@ -692,24 +692,6 @@ a.social {
 
 
 
-/*************
-   postDetail
-**************/
-
-div.commentContainer {
-
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-
-
-}
-
-div.comments {
-  border-bottom: 1px solid black;
-
-}
-
 
 
 
@@ -970,7 +952,43 @@ div.containerUser {
 }
 
 
+/*************
+   postDetail
+**************/
 
+.user-Details-Container {
+
+    display: flex;
+
+}
+
+.details-Nick {
+    margin-left: 20px;
+}
+
+.user-Image-Profile {
+
+    width: 85px;
+    margin-top: 3px;
+    margin-left: 5px;
+    border-radius: 50px;
+
+}
+.comments-Container {
+
+  display: flex;
+    margin-left: 20px;
+
+
+}
+}
+.users-Comments {
+
+    padding-top: 8px;
+    margin-left: 6px;
+    font-size: 17px;
+
+}
 
 
 
