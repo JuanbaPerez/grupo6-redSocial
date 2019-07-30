@@ -46,7 +46,7 @@
 
 </form>
 
-<a class="link" href="registration.html">Click here for registration</a>
+<a class="link" href="registration.php">Click here for registration</a>
 
 
 </section>
