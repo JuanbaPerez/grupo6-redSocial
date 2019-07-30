@@ -16,9 +16,7 @@
   font-family: sans-serif;
 
 }
-div.main-container{
-  background-image: url("../img/treehome.jpg");
-}
+
 
 .photoContainer2 img {
   display: block;
@@ -228,14 +226,16 @@ div.nameContact {
 
 
 
+
 .buttonHome {
   margin-top: 50px;
 }
 
 .titleHome {
-  margin-left: 70%;
+  margin: 0 auto;
   width: 300px;
   height: 50px;
+
   color: black;
   border-radius: 10px;
 
@@ -257,8 +257,8 @@ div.nameContact {
 
 main div.textHome h3 {
 
-  width: 28%;
-  margin-left: 68%;
+  width: 60%;
+  margin: 0 auto;
   font-family: 'Cinzel', serif;
 
 }
@@ -266,6 +266,7 @@ main div.textHome h3 {
 main div.textHome {
   margin-top: 50px;
 }
+
 
 
 
