@@ -18,9 +18,9 @@
 }
 
 
-.photoContainer2 img {
+.photoContainer img {
   display: block;
-  margin-left: 72%;
+  margin: 0 auto;
   margin-top: 80px;
 }
 
@@ -119,7 +119,7 @@ BARRA DE NAVEGACION
 /* aca le das estilo a la barra*/
 .sidebar {
   height: 100%;
-  width: 160px;
+  width: 180px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -663,7 +663,7 @@ a.social {
   }
 
   .img-heart a i, .img-comments a i {
-    font-size: 40px;
+    font-size: 20px;
 
 
   }
@@ -866,6 +866,11 @@ display: none;
 
   }
 
+  .photoContainer img {
+    margin-top: 60px;
+    height: 260px;
+  }
+
   /***************************
         Profile User
   ****************************/
@@ -900,6 +905,14 @@ div.containerUser {
   margin-top: 100px;
 }
 
+/********************
+homePost
+*********************/
+.img-heart a i, .img-comments a i {
+  font-size: 30px;
+
+
+}
 
 
 }
@@ -971,7 +984,20 @@ div.containerUser {
 
 
 
+/********************
+homePost
+*********************/
+.img-heart a i, .img-comments a i {
+  font-size: 40px;
 
+
+}
+
+.postContainer {
+  position: relative;
+  margin-right: 20px;
+  width: 70%;
+}
 
 
 

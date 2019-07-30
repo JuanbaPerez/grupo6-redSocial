@@ -40,8 +40,6 @@
 
 </main>
 
-<a href="homePost.php">HOMEPOST</a>
-<a href="profileuser.php">PROFILEUSER</a>
 
 
 <?php
