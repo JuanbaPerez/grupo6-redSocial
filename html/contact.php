@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CONTACT | MyFuture</title>
   </head>
-  <div class="container">
   <body>
+    <div class="container">
 
 <?php
 
@@ -23,7 +23,6 @@
 <section>
   <div class="photoContainer">
     <img src="../img/logo.png" alt="logo">
-
   </div>
 
 <div class="title">

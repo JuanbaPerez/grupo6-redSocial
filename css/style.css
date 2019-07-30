@@ -973,7 +973,7 @@ div.containerUser {
 
     display: flex;
 
-<<<<<<< HEAD
+
 }
 
 .details-Nick {
@@ -995,21 +995,22 @@ div.containerUser {
 
 
 }
-}
+
 .users-Comments {
 
     padding-top: 8px;
     margin-left: 6px;
     font-size: 17px;
-=======
+
+}
+
 /********************
 homePost
 *********************/
+
+
 .img-heart a i, .img-comments a i {
   font-size: 40px;
-
->>>>>>> 4e7ad4a195bfce5c1a6e747ea21966128cd0995e
-
 }
 
 .postContainer {
