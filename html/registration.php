@@ -8,6 +8,7 @@
   $email = "";
   $pass = "";
   $repass = "";
+  $lastname = "";
 
 
 
@@ -34,6 +35,7 @@ if ($_POST) {
   $name = $_POST["name"];
   $user = $_POST["user"];
   $email = $_POST["email"];
+  $lastname = $_POST ["last-name"];
 
 //si no hay errores te manda al login
   if(!$errores) {
@@ -87,6 +89,14 @@ if ($_POST) {
 </label>
 <?php if (isset($errores['name'])) : ?>
   <p class="errors"><?php echo $errores['name'] ?></p>
+<?php endif; ?>
+
+<label class="label" for="">
+<input type="text" class="input" name="last-name" placeholder="Last Name" value="<?=$lastname?>">
+
+</label>
+<?php if (isset($errores['last-name'])) : ?>
+<p class="errors"><?php echo $errores['last-name'] ?></p>
 <?php endif; ?>
 
 

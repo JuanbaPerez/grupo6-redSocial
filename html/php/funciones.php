@@ -6,10 +6,18 @@
 
 //NAME
     if ($datos["name"] == "") {
-      $errores["name"] = "Tienes que llegar el nombre";
+      $errores["name"] = "Tienes que llenar el Nombre";
     }
     if (strlen($datos["name"]) < 6) {
       $errores["name"] = "Tienes que poner almenos 6 caracteres";
+    }
+
+    if ($datos["last-name"] == ""){
+      $errores ["last-name"] = "Tienes que llenar el Apellido";
+    }
+
+    if (strlen($datos["last-name"])<6){
+      $errores["last-name"] = "Tienes que poner almenos 4 caracteres";
     }
 
 
