@@ -99,6 +99,9 @@ if ($_POST) {
 <p class="errors"><?php echo $errores['last-name'] ?></p>
 <?php endif; ?>
 
+<label class="label"></label>
+<input type="date" class="input" name="date" value="">
+</label>
 
 
 <label class="label" for="">
@@ -107,8 +110,6 @@ if ($_POST) {
 <?php if (isset($errores['user'])) : ?>
   <p class="errors"><?php echo $errores['user'] ?></p>
 <?php endif; ?>
-
-
 
 
 
@@ -137,7 +138,8 @@ if ($_POST) {
   <p class="errors"><?php echo $errores['rePass'] ?></p>
 <?php endif; ?>
 
-
+<label class="label" for=""> I agree with the <a href = "php/terms.php">Terms and conditions</a><input type="checkbox" class="input terms" name="terms" value="">
+</label>
 
 
 <button type="submit" class="buttonPages" name="button">Registrer!</button>
