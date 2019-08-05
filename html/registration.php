@@ -10,37 +10,40 @@
   $repass = "";
   $lastname = "";
 
+if (isLogged()) {
+  header("location: homePost.php");exit;
+}
 
 
 
 
-if ($_POST) {
-  //  VALIDO
-  $errores = validarRegistracion($_POST);
+  if ($_POST) {
+    $errors = validateRegistration($_POST);
 
-  // SI NO HAY ERRORES
-  if (empty($errores)) {
-    //  REGISTRAR
-    $usuario = armarUsuario($_POST);
-    registrar($usuario);
+      
+     if (count($errors) == 0) {
+       
+       $user = createUser($_POST);
 
-    //REENVIARLO AL EXITO
-    header("location: login.php");exit;
-  }
+       saveUser($user);
 
-  //foreach ($errores as $error) {
+       
+
+       login($user["email"]);
+
+     
+       header("location:login.php");exit;
+     }
+
+
+  // foreach ($errors as $error) {
   //  echo $error . "<br>";
-  //} MUESTRO LOS ERRORES CON ESTO
+  // } //MUESTRO LOS ERRORES CON ESTO
 
   $name = $_POST["name"];
-  $user = $_POST["user"];
+  $user = $_POST["username"];
   $email = $_POST["email"];
   $lastname = $_POST ["last-name"];
-
-//si no hay errores te manda al login
-  if(!$errores) {
-      header("location: login.php?name=$name");
-    }
 
 
 }
@@ -87,28 +90,28 @@ if ($_POST) {
   <label class="label" for="">
 <input type="text" class="input" name="name" placeholder="Name" value="<?=$name?>">
 </label>
-<?php if (isset($errores['name'])) : ?>
-  <p class="errors"><?php echo $errores['name'] ?></p>
+<?php if (isset($errors['name'])) : ?>
+  <p class="errors"><?php echo $errors['name'] ?></p>
 <?php endif; ?>
 
 <label class="label" for="">
 <input type="text" class="input" name="last-name" placeholder="Last Name" value="<?=$lastname?>">
 
 </label>
-<?php if (isset($errores['last-name'])) : ?>
-<p class="errors"><?php echo $errores['last-name'] ?></p>
+<?php if (isset($errors['last-name'])) : ?>
+<p class="errors"><?php echo $errors['last-name'] ?></p>
 <?php endif; ?>
 
 <label class="label"></label>
-<input type="date" class="input" name="date" value="">
+<input type="date" class="input" name="birthday" value="">
 </label>
 
 
 <label class="label" for="">
-<input type="text" class="input" name="user" placeholder="User" value="<?=$user?>">
+<input type="text" class="input" name="username" placeholder="User" value="<?=$user?>">
 </label>
-<?php if (isset($errores['user'])) : ?>
-  <p class="errors"><?php echo $errores['user'] ?></p>
+<?php if (isset($errors['user'])) : ?>
+  <p class="errors"><?php echo $errors['user'] ?></p>
 <?php endif; ?>
 
 
@@ -116,8 +119,8 @@ if ($_POST) {
 <label class="label" for="">
 <input type="text" class="input" name="email" placeholder="E-mail" value="<?=$email?>">
 </label>
-<?php if (isset($errores['email'])) : ?>
-  <p class="errors"><?php echo $errores['email'] ?></p>
+<?php if (isset($errors['email'])) : ?>
+  <p class="errors"><?php echo $errors['email'] ?></p>
 <?php endif; ?>
 
 
@@ -125,24 +128,25 @@ if ($_POST) {
 <label class="label" for="">
 <input type="password" class="input" name="password" placeholder="Password">
 </label>
-<?php if (isset($errores['password'])) : ?>
-  <p class="errors"><?php echo $errores['password'] ?></p>
+<?php if (isset($errors['password'])) : ?>
+  <p class="errors"><?php echo $errors['password'] ?></p>
 <?php endif; ?>
 
 
 
 <label class="label" for="">
-<input type="password" class="input" name="rePass" placeholder="Verify password">
+<input type="password" class="input" name="confirm_password" placeholder="Verify password">
 </label>
-<?php if (isset($errores['rePass'])) : ?>
-  <p class="errors"><?php echo $errores['rePass'] ?></p>
+<?php if (isset($errors['confirm_password'])) : ?>
+  <p class="errors"><?php echo $errors['confirm_password'] ?></p>
 <?php endif; ?>
 
-<label class="label" for=""> I agree with the <a href = "php/terms.php">Terms and conditions</a><input type="checkbox" class="input terms" name="terms" value="">
-</label>
+<!-- <label class="label" for=""> I agree with the <a href = "php/terms.php">Terms and conditions</a>
+<input type="checkbox" class="input terms" name="terms" value="">
+</label> -->
 
 
-<button type="submit" class="buttonPages" name="button">Registrer!</button>
+<button type="submit" class="buttonPages">Registrer!</button>
 
 </form>
 

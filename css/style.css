@@ -1017,6 +1017,10 @@ homePost
   width: 70%;
 }
 
+.postDetailContainer {
+  margin: 0 auto;
+}
+
 
 
 

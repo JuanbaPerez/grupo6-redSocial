@@ -17,7 +17,7 @@
 
   <main>
 
-    <div class="postContainer">
+    <div class="postContainer postDetailContainer">
 
 
       <div class="photoProfileContainer">

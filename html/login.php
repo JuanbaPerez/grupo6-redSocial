@@ -1,3 +1,30 @@
+<?php
+
+require_once("php/funciones.php");
+
+if (isLogged()) {
+  header("location:homePost.php");exit;
+}
+
+if ($_POST) {
+  $errors = validateLogin($_POST);
+
+  if (count($errors) == 0) {
+    login($_POST["email"]);
+    header("location:homePost.php");exit;
+  } else {
+    foreach ($errors as $error) {
+      echo $error . "<br>";die;
+    }
+  }
+}
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

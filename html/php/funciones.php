@@ -1,130 +1,220 @@
 <?php
 
+session_start();
 
-  function validarRegistracion($datos) {
-    $errores = [];
+
+
+
+$dsn = 'mysql:host=192.168.64.2;dbname=myFuture_db;port=3306';
+$db_user = 'myFuture';
+$db_pass = 'myfuture_db';
+$opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ];
+
+
+try {
+
+  $db = new PDO($dsn, $db_user, $db_pass, $opt);
+
+}
+
+catch (PDOException $Exception) {
+  echo "No se pudo establecer la conexión a la base de datos. ";
+  echo $Exception->getMessage();
+
+}
+
+
+  function validateRegistration($data) {
+    $errors = [];
 
 //NAME
-    if ($datos["name"] == "") {
-      $errores["name"] = "Tienes que llenar el Nombre";
+    if ($data["name"] == "") {
+      $errors["name"] = "Tienes que llenar el Nombre";
     }
-    if (strlen($datos["name"]) < 6) {
-      $errores["name"] = "Tienes que poner almenos 6 caracteres";
-    }
-
-    if ($datos["last-name"] == ""){
-      $errores ["last-name"] = "Tienes que llenar el Apellido";
+    if (strlen($data["name"]) < 6) {
+      $errors["name"] = "Tienes que poner almenos 6 caracteres";
     }
 
-    if (strlen($datos["last-name"])<6){
-      $errores["last-name"] = "Tienes que poner almenos 4 caracteres";
+    if ($data["last-name"] == ""){
+      $errors ["last-name"] = "Tienes que llenar el Apellido";
+    }
+
+    if (strlen($data["last-name"])<4){
+      $errors["last-name"] = "Tienes que poner almenos 4 caracteres";
     }
 
 
 //USER
-    if ($datos["user"] == "") {
-      $errores["user"] = "Tienes que llenar el user";
+    if ($data["username"] == "") {
+      $errors["username"] = "Tienes que llenar el user";
     }
-    if (strlen($datos["user"]) < 5) {
-      $errores["user"] = "Tienes que ingresar al menos 5 caracteres";
+    if (strlen($data["username"]) < 5) {
+      $errors["username"] = "Tienes que ingresar al menos 5 caracteres";
     }
 
 
 //EMAIL
-    if ($datos["email"] == "") {
-      $errores["email"] = "Tienes que llenar el mail";
-    } else if (filter_var($datos["email"], FILTER_VALIDATE_EMAIL) == false) {
-      $errores["email"] = "Tiene que ser un mail valido";
+    if ($data["email"] == "") {
+      $errors["email"] = "Tienes que llenar el mail";
+    } else if (filter_var($data["email"], FILTER_VALIDATE_EMAIL) == false) {
+      $errors["email"] = "Tiene que ser un mail valido";
     } //ELSE IF PARA EXISTE MAIL FUNCTION
 
 
 //PASS
 
-    if ($datos["password"] == "") {
-      $errores["password"] = "Tienes que llenar la password";
+    if ($data["password"] == "") {
+      $errors["password"] = "Tienes que llenar la password";
     }
 //REPASS
-    if ($datos["rePass"] == "") {
-      $errores["rePass"] = "Tienes que llenar la confirmacion de la password";
+    if ($data["confirm_password"] == "") {
+      $errors["confirm_password"] = "Tienes que llenar la confirmacion de la password";
     }
 //COINCIDAN LAS 2 Y DISTINTO A VACIO
-    if ($datos["password"] != "" && $datos["rePass"] != "" && $datos["password"] != $datos["rePass"]) {
-      $errores["password"] = "Las contrasenias tienen que coincidir";
+    if ($data["password"] != "" && $data["confirm_password"] != "" && $data["password"] != $data["confirm_password"]) {
+      $errors["password"] = "Las contrasenias tienen que coincidir";
     }
 
 
-    return $errores;
+    return $errors;
 
   }
 
-  function existeElMail($email) {
-    $usuario = buscarUsuarioPorEmail($email);
+   function validateLogin ($data) {
+    $errors = [];
+    
+    if (!existsEmail($data["email"])){
+        $errors["email"] = "los Datos son incorrectos";
+    } else {
+      $user = bringUserByEmail($data["email"]);
 
-    if ($usuario == null) {
+      if (password_verify($data["password"], $user["password"]) == false) {
+        $errors["email"] = "La contraseña es invalida";
+      }
+    }
+    return $errors;
+  }
+
+  function existsEmail($email) {
+    $user = bringUserByEmail($email);
+
+    if ($user == null) {
       return false;
     } else {
       return true;
     }
   }
 
-  function buscarUsuarioPorEmail($email) {
-    $usuarios = traerTodosLosUsuarios();
+  function bringUserByEmail($email) {
+    global $db;
 
-    foreach ($usuarios as $usuario) {
-      if ($usuario["email"] == $email) {
-        return $usuario;
-      }
+    $query = $db->prepare("SELECT * FROM users WHERE email =:email");
+    $query ->bindParam(':email', $email, PDO::PARAM_STR);
+
+    $query ->execute();
+
+    $user = $query->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+      return $user;
+    } else {
+      return null;
     }
 
-    return null;
+    
   }
 
 
-  function armarUsuario($datos) {
+  function createUser($data) {
+    echo ("<pre>");
+    var_dump ($data);
+    echo ("</pre>");
     return [
       "id" => proximoId(),
-      "name" => ucfirst($datos["name"]),
-      "user" => $datos["user"],
-      "email" => $datos["email"],
-      "password" => password_hash($datos["password"], PASSWORD_DEFAULT)
+      "name" => ucfirst($data["name"]),
+      "lastName" => ucfirst($data["last-name"]),
+      "birthday" => $data["birthday"],
+      "username" => $data["username"],
+      "email" => $data["email"],
+      //"avatar" => $data["avatar"],
+      //"radioButton" => $data["radioButton"],
+      "password" => password_hash($data["password"], PASSWORD_DEFAULT)
+      
 
     ];
   }
+  
 
-  function registrar($usuario) {
-    $usuarios = traerTodosLosUsuarios();
-
-    $usuarios[] = $usuario;
-
-    $usuariosJson = json_encode($usuarios);
-
-    file_put_contents("php/usuarios.json", $usuariosJson);
+  function login($email) {
+    $loggedUser = bringUserByEmail($email);
+    $_SESSION["loggedUser"] = $email;
   }
+
+  function saveUser($user) {
+    global $db;
+
+    $query = $db->prepare('INSERT INTO users (name, lastName, birthday, username, email, password, confirm_password) 
+    VALUES (:name, :last-name, :birthday, :username, :email, :password)');
+
+
+    $query->bindParam(':name', $user['name'], PDO::PARAM_STR);
+    $query->bindParam(':last-name', $user['last-name'], PDO::PARAM_STR);
+    $query->bindParam(':birthday', $user['birthday'], PDO::PARAM_STR);
+    $query->bindParam(':username', $user['username'], PDO::PARAM_STR);
+    $query->bindParam(':email', $user['email'], PDO::PARAM_STR);
+    // $query->bindParam(':avatar', $user['avatar'], PDO::PARAM_STR);
+    // $query->bindParam(':radioButton', $user['radioButton'],PDO::PARAM_STR);
+    $query->bindParam(':password', $user['password'], PDO::PARAM_STR);
+    $query->bindParam(':confirm_password', $user['confirm_password'], PDO::PARAM_STR);
+    // $query->bindParam(':terms', $user['terms'], PDO::PARAM_STR);
+    // $query->bindParam(':condition', $user['terms'], PDO::PARAM_STR);
+
+
+    $query->execute();
+    
+
+    
+  }
+
+  function isLogged() {
+    if (isset($_SESSION["loggedUser"])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function bringLoggedUser() {
+  if (isLoggued()) {
+    return bringUserByEmail($_SESSION["loggedUser"]);
+  }
+
+  return null;
+}
+
+function logout(){
+  $_SESSION = [];
+
+  header("location:index.php");exit;
+}
+
+  
 
 
   function proximoId() {
-    $usuarios = traerTodosLosUsuarios();
+    global $db;
 
-    if (empty($usuarios)) {
-      return 1;
-    }
-
-
-    $ultimoUsuario = end($usuarios);
-
-    return $ultimoUsuario["id"] + 1;
+    return $db->lastInsertId() + 1;
   }
 
-  function traerTodosLosUsuarios() {
-    $archivo = file_get_contents("php/usuarios.json");
+  function bringAllUsers() {
+    global $db;
+    $query = $db-> prepare('SELECT * FROM users');
+    $query->execute();
 
-    if ($archivo == "") {
-      return [];
-    }
+    $users = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    $usuarios = json_decode($archivo, true);
-
-    return $usuarios;
+    return $users;
   }
 
 
