@@ -12,6 +12,10 @@
 <body>
 
   <header>
+
+  <a href="logout.php">Logout</a>
+
+
     <?php
 
       include_once ("php/sidebar.php")
@@ -20,6 +24,8 @@
   </header>
 
 <div class="photoContainer">
+
+
 
   <img src="../img/logo.png" alt="logo logFoto">
 </div>

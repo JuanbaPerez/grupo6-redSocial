@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -5,9 +6,9 @@ session_start();
 
 
 
-$dsn = 'mysql:host=192.168.64.2;dbname=myFuture_db;port=3306';
-$db_user = 'myFuture';
-$db_pass = 'myfuture_db';
+$dsn = 'mysql:host=127.0.0.1;dbname=;port=3306';
+$db_user = 'root';
+$db_pass = '';
 $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ];
 
 
@@ -82,7 +83,7 @@ catch (PDOException $Exception) {
 
    function validateLogin ($data) {
     $errors = [];
-    
+
     if (!existsEmail($data["email"])){
         $errors["email"] = "los Datos son incorrectos";
     } else {
@@ -108,7 +109,7 @@ catch (PDOException $Exception) {
   function bringUserByEmail($email) {
     global $db;
 
-    $query = $db->prepare("SELECT * FROM users WHERE email =:email");
+    $query = $db->prepare("SELECT * FROM myfuture.users WHERE email =:email");
     $query ->bindParam(':email', $email, PDO::PARAM_STR);
 
     $query ->execute();
@@ -121,9 +122,13 @@ catch (PDOException $Exception) {
       return null;
     }
 
-    
+
   }
 
+  function login($email) {
+    $loggedUser = bringUserByEmail($email);
+    $_SESSION["loggedUser"] = $email;
+  }
 
   function createUser($data) {
     echo ("<pre>");
@@ -139,26 +144,39 @@ catch (PDOException $Exception) {
       //"avatar" => $data["avatar"],
       //"radioButton" => $data["radioButton"],
       "password" => password_hash($data["password"], PASSWORD_DEFAULT)
-      
+
 
     ];
   }
-  
 
-  function login($email) {
-    $loggedUser = bringUserByEmail($email);
-    $_SESSION["loggedUser"] = $email;
+
+
+  function proximoId() {
+    global $db;
+
+    return $db->lastInsertId() + 1;
+  }
+
+  function bringAllUsers() {
+    global $db;
+    $query = $db-> prepare('SELECT * FROM users');
+    $query->execute();
+
+    $users = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $users;
   }
 
   function saveUser($user) {
     global $db;
 
-    $query = $db->prepare('INSERT INTO users (name, lastName, birthday, username, email, password, confirm_password) 
-    VALUES (:name, :last-name, :birthday, :username, :email, :password)');
+
+    $query = $db->prepare('INSERT INTO myfuture.users (name, lastName, birthday, username, email, password, confirm_password)
+    VALUES (:name, :lastName, :birthday, :username, :email, :password, :confirm_password)');
 
 
     $query->bindParam(':name', $user['name'], PDO::PARAM_STR);
-    $query->bindParam(':last-name', $user['last-name'], PDO::PARAM_STR);
+    $query->bindParam(':lastName', $user['lastName'], PDO::PARAM_STR);
     $query->bindParam(':birthday', $user['birthday'], PDO::PARAM_STR);
     $query->bindParam(':username', $user['username'], PDO::PARAM_STR);
     $query->bindParam(':email', $user['email'], PDO::PARAM_STR);
@@ -171,9 +189,9 @@ catch (PDOException $Exception) {
 
 
     $query->execute();
-    
 
-    
+
+
   }
 
   function isLogged() {
@@ -198,24 +216,8 @@ function logout(){
   header("location:index.php");exit;
 }
 
-  
 
 
-  function proximoId() {
-    global $db;
-
-    return $db->lastInsertId() + 1;
-  }
-
-  function bringAllUsers() {
-    global $db;
-    $query = $db-> prepare('SELECT * FROM users');
-    $query->execute();
-
-    $users = $query->fetchAll(PDO::FETCH_ASSOC);
-
-    return $users;
-  }
 
 
 
