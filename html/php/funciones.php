@@ -110,7 +110,7 @@ catch (PDOException $Exception) {
   function bringUserByEmail($email) {
     global $db;
 
-    $query = $db->prepare("SELECT * FROM myfuture.users WHERE email =:email");
+    $query = $db->prepare("SELECT * FROM myFuture_db.users WHERE email =:email");
     $query ->bindParam(':email', $email, PDO::PARAM_STR);
 
     $query ->execute();
@@ -172,8 +172,8 @@ catch (PDOException $Exception) {
     global $db;
 
 
-    $query = $db->prepare('INSERT INTO myfuture.users (name, lastName, birthday, username, email, password, confirm_password)
-    VALUES (:name, :lastName, :birthday, :username, :email, :password, :confirm_password)');
+    $query = $db->prepare('INSERT INTO myFuture_db.users (name, lastName, birthday, username, email, password)
+    VALUES (:name, :lastName, :birthday, :username, :email, :password)');
 
 
     $query->bindParam(':name', $user['name'], PDO::PARAM_STR);
@@ -184,7 +184,7 @@ catch (PDOException $Exception) {
     // $query->bindParam(':avatar', $user['avatar'], PDO::PARAM_STR);
     // $query->bindParam(':radioButton', $user['radioButton'],PDO::PARAM_STR);
     $query->bindParam(':password', $user['password'], PDO::PARAM_STR);
-    $query->bindParam(':confirm_password', $user['confirm_password'], PDO::PARAM_STR);
+    
     // $query->bindParam(':terms', $user['terms'], PDO::PARAM_STR);
     // $query->bindParam(':condition', $user['terms'], PDO::PARAM_STR);
 
