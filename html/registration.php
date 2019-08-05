@@ -20,18 +20,18 @@ if (isLogged()) {
   if ($_POST) {
     $errors = validateRegistration($_POST);
 
-      
+
      if (count($errors) == 0) {
-       
+
        $user = createUser($_POST);
 
        saveUser($user);
 
-       
+
 
        login($user["email"]);
 
-     
+
        header("location:login.php");exit;
      }
 
@@ -146,9 +146,27 @@ if (isLogged()) {
 </label> -->
 
 
+<hr>
+<div class='col-md-4'><b>Sex</b><input type=radio name=sex value='male'>Male </font><input type=radio name=sex value='female'>Female</div></div>
+
+
+
+<div class='row'><div class='col-md-4'><input type=checkbox name=agree value='yes'>I agree to terms and conditions  </div>
+
+
+
+
+
+
+
 <button type="submit" class="buttonPages">Registrer!</button>
 
+
 </form>
+
+
+
+
 
 
 
