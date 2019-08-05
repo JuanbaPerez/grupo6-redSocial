@@ -82,7 +82,7 @@ catch (PDOException $Exception) {
 
   }
 
-   function validateLogin ($data) {
+   function validateLogin($data) {
     $errors = [];
 
     if (!existsEmail($data["email"])){
@@ -91,10 +91,20 @@ catch (PDOException $Exception) {
       $user = bringUserByEmail($data["email"]);
 
       if (password_verify($data["password"], $user["password"]) == false) {
-        $errors["email"] = "La contraseña es invalida";
-      }
+        $errors["password"] = "La contraseña es invalida"; 
+      } 
     }
     return $errors;
+  }
+
+  function existPassword($pass) {
+
+    $query = $db->prepare("SELECT * FROM myFuture_db.users WHERE password =:password");
+    $query ->bindParam(':password', $pass, PDO::PARAM_STR);
+
+    $query ->execute();
+
+    $user = $query->fetch(PDO::FETCH_ASSOC);
   }
 
   function existsEmail($email) {

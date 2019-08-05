@@ -2,13 +2,9 @@
 
 require_once("php/funciones.php");
 
-if (isLogged()) {
-  header("location:homePost.php");exit;
-}
-
 if ($_POST) {
   $errors = validateLogin($_POST);
-
+  
   if (count($errors) == 0) {
     login($_POST["email"]);
     header("location:homePost.php");exit;
@@ -17,10 +13,12 @@ if ($_POST) {
       echo $error . "<br>";die;
     }
   }
+
 }
 
-
-
+if (isLogged()) {
+  header("location:homePost.php");exit;
+}
 
 
 ?>
@@ -38,8 +36,8 @@ if ($_POST) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LOGIN | MyFuture</title>
   </head>
-  <div class="container">
   <body>
+  <div class="container">
 
     <?php
 
@@ -59,7 +57,8 @@ if ($_POST) {
 </div>
 
 
-<form id="loginform" action="login.html" method="post">
+<form id="loginform" action="login.php" method="post">
+
   <label class="label" for="">
 <input type="text" class="input" name="email" placeholder="E-mail">
 </label>
@@ -72,7 +71,7 @@ if ($_POST) {
 
 <br>
 
-<button type="button" class="buttonPages" name="button">Login</button>
+<button type="submit" class="buttonPages" name="button">Login</button>
 
 </form>
 
