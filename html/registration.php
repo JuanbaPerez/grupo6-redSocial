@@ -1,7 +1,8 @@
 
 <?php
 
-  require_once("php/funciones.php");
+  require_once ("php/funciones.php");
+  require_once ("db.php");
 
   $name = "";
   $user = "";

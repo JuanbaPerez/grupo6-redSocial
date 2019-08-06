@@ -1,28 +1,14 @@
 
 <?php
+include_once ("db.php");
 
 session_start();
 
 
 
 
-$dsn = 'mysql:host=127.0.0.1;dbname=;port=3306';
-$db_user = 'root';
-$db_pass = '';
-$opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ];
 
 
-try {
-
-  $db = new PDO($dsn, $db_user, $db_pass, $opt);
-
-}
-
-catch (PDOException $Exception) {
-  echo "No se pudo establecer la conexión a la base de datos. ";
-  echo $Exception->getMessage();
-
-}
 
 
   function validateRegistration($data) {
@@ -90,21 +76,26 @@ catch (PDOException $Exception) {
     } else {
       $user = bringUserByEmail($data["email"]);
 
-      if (password_verify($data["password"], $user["password"]) == false) {
+      if (!password_verify($data["password"], $user["password"])) {
         $errors["password"] = "La contraseña es invalida"; 
-      } 
+      } else {
+        password_verify($user["password"], existPassword(
+          $data["password"]));
+      }
     }
     return $errors;
   }
 
-  function existPassword($pass) {
+  function existPassword($passFromDatabase) {
 
     $query = $db->prepare("SELECT * FROM myFuture_db.users WHERE password =:password");
-    $query ->bindParam(':password', $pass, PDO::PARAM_STR);
+    $query ->bindParam(':password', $passFromDatabase, PDO::PARAM_STR);
 
     $query ->execute();
 
     $user = $query->fetch(PDO::FETCH_ASSOC);
+
+    return $user;
   }
 
   function existsEmail($email) {
@@ -132,8 +123,6 @@ catch (PDOException $Exception) {
     } else {
       return null;
     }
-
-
   }
 
   function login($email) {
