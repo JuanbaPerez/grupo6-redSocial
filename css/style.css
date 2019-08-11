@@ -384,79 +384,6 @@ main div.textHome {
 
 
 
-  /********************  FRIENDS:
-
-
-  div.friends-box{
-  display: block;
-  position: fixed;
-  background-color: #a6a6a6;
-  width: 500px;
-  margin-left: 150px;
-  margin-top: 236px;
-
-  }
-
-  div.icon-image{
-  display: block;
-  position: absolute;
-  margin-left: 5px;
-  margin-top: 5px;
-  }
-
-  div.textFriends{
-
-  display: block;
-  position: absolute;
-  margin-left: 30px;
-  margin-top: 5px;
-
-
-  }
-
-  div.search-friends{
-
-  display: block;
-  position: absolute;
-  margin-left: 60%;
-  font-size: 15px;
-  margin-top: 5px;
-
-
-  }
-
-  div.friendsPhotos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 70px;
-
-  }
-
-  div.friendsImage {
-
-
-  }
-
-  div.friendsImage img {
-    width: 130px;
-  }
-
-
-  div.paco-name{
-  display: block;
-  position: absolute;
-  margin-top: 190px;
-  margin-left: 173px;
-
-  }
-
-
-
-;**********************/
-
-
-
 
 /***************************
       REGISTRATION
@@ -738,6 +665,78 @@ POSTDETAIL
   font-size: 40px;
 }
 
+/********************
+adminPanel
+*********************/
+
+.adminPanelBody {
+  margin: 0px;
+  border: 0px;
+}
+
+div.adminContainer {
+  display: flex;
+  height: 100%;
+}
+
+div.header {
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+div.sidebarAdminPanel {
+  width: 30%;
+  background: #527a7a;
+
+
+  
+}
+
+div.data {
+
+  width: 70%;
+  color: black;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+
+img.adminPhoto {
+  background: black;
+  
+  width: 100px;
+}
+
+
+
+
+
+li.adminLi {
+  padding: 20px;
+  border-bottom: 2px solid grey;
+  list-style-type: none;
+  text-align: center;
+  
+}
+
+li.adminLi:hover {
+  background: #c0392b;
+  color: white;
+}
+
+/*********** ADD ************/
+
+div.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button.addButton {
+  background: grey;
+}
+
 /*************
  FOOTER
 **************/
@@ -980,6 +979,15 @@ POSTDETAIL
   font-size: 50px;
 }
 
+/*********** ADD ************/
+
+div.formContainer {
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+
 
 }
 
@@ -1047,9 +1055,6 @@ div.containerUser {
 }
 
 
-/*************
-   postDetail
-**************/
 
   /*****************
 POSTDETAIL
@@ -1096,58 +1101,14 @@ homePost
   margin: 0 auto;
 }
 
+/*********** ADD ************/
 
+div.formContainer {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
 
-/********************
-adminPanel
-
-
-.adminPanelBody {
-  margin: 0px;
-  border: 0px;
 }
-
-div.header {
-  width: 100%;
-  height: 120px;
-  background: black;
-  color: white;
-}
-
-div.sidebarAdminPanel {
-  width: 300px;
-  height: 400px;
-  background: #37ae60;
-  float: left;
-}
-
-div.data {
-  height: 700px;
-  background: #c0392b;
-  color: white;
-  font-family: Helvetica;
-  font-size: 25px;
-}
-
-img.adminPhoto {
-  background: black;
-  
-  width: 100px;
-}
-
-
-li.adminLi {
-  padding: 20px;
-  border-bottom: 2px solid grey;
-  
-}
-
-li.adminLi:hover {
-  background: #c0392b;
-  color: white;
-}
-
-*********************/
 
 
 }
