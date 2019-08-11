@@ -1,4 +1,5 @@
 
+
 <?php
 include_once ("db.php");
 
@@ -87,6 +88,8 @@ session_start();
   }
 
   function existPassword($passFromDatabase) {
+
+    global $db;
 
     $query = $db->prepare("SELECT * FROM myFuture_db.users WHERE password =:password");
     $query ->bindParam(':password', $passFromDatabase, PDO::PARAM_STR);

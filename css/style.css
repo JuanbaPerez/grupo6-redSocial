@@ -688,6 +688,55 @@ a.social {
     margin-top: 12px;
   }
 
+  /*****************
+POSTDETAIL
+  ******************/
+.user-Details-Container {
+
+    display: flex;
+ 
+    
+
+
+}
+
+.details-Nick {
+    margin-left: 20px;
+}
+
+.user-Image-Profile {
+
+    width: 60px;
+    margin-top: 3px;
+    margin-left: 5px;
+    border-radius: 50px;
+
+}
+.comments-Container {
+
+  display: flex;
+  flex-direction: row;
+  
+    margin-left: 20px;
+
+
+}
+
+.comments-Container .user-Name {
+  font-size: 20px;
+}
+
+.users-Comments {
+
+    padding-top: 8px;
+    margin-left: 6px;
+    font-size: 12px;
+
+}
+
+.arrowBack i {
+  font-size: 40px;
+}
 
 /*************
  FOOTER
@@ -888,6 +937,49 @@ homePost
 
 }
 
+  /*****************
+POSTDETAIL
+  ******************/
+
+
+.details-Nick {
+    margin-left: 40px;
+}
+
+.user-Image-Profile {
+
+    width: 60px;
+    margin-top: 3px;
+    margin-left: 5px;
+    border-radius: 50px;
+
+}
+.comments-Container {
+
+  display: flex;
+  flex-direction: row;
+    margin-left: 20px;
+
+
+}
+
+.comments-Container .user-Name {
+  font-size: 20px;
+}
+
+.users-Comments {
+
+    padding-top: 8px;
+    margin-left: 6px;
+    font-size: 12px;
+
+}
+
+
+.arrowBack i {
+  font-size: 50px;
+}
+
 
 }
 
@@ -959,40 +1051,31 @@ div.containerUser {
    postDetail
 **************/
 
-.user-Details-Container {
+  /*****************
+POSTDETAIL
+  ******************/
 
-    display: flex;
 
 
-}
-
-.details-Nick {
-    margin-left: 20px;
-}
 
 .user-Image-Profile {
 
-    width: 85px;
-    margin-top: 3px;
-    margin-left: 5px;
-    border-radius: 50px;
+    width: 70px;
+
+    border-radius: 30px;
 
 }
-.comments-Container {
-
-  display: flex;
-    margin-left: 20px;
 
 
+.comments-Container .user-Name {
+  font-size: 20px;
 }
 
 .users-Comments {
-
-    padding-top: 8px;
-    margin-left: 6px;
-    font-size: 17px;
+    font-size: 18px;
 
 }
+
 
 /********************
 homePost

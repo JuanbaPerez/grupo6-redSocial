@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Document</title>
+  <title>Detail</title>
 </head>
 <body>
 
@@ -16,6 +16,12 @@
 
 
   <main>
+
+  <div class="arrowBack">
+
+      <a href="profileuser.php">
+      <i class="fa fa-arrow-left arrowFont"></i> </a>
+  </div>
 
     <div class="postContainer postDetailContainer">
 
@@ -116,15 +122,7 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-    </main>
+</main>
 
 
 
