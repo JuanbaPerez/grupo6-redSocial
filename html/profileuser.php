@@ -28,6 +28,10 @@
 
      </div>
 
+       <div class = "addPostContainer"> 
+        <a href="addPost.php"><i class="fa fa-plus">Add Post</i></a>
+  </div>
+
 <main class="profileUserContainer">
 
     <div class="containerUser">
@@ -56,6 +60,10 @@
       <a class="social" href="#"><i class="fa fa-facebook"></i></a>
     </div>
 
+  </div>
+
+      <div class = "mobileAddPostContainer"> 
+        <a href="addPost.php"><i class="fa fa-plus">Add Post </i></a>
   </div>
 
   <div class="postContainerProfile">

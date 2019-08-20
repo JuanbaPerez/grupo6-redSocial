@@ -3,6 +3,7 @@
 
   require_once ("php/funciones.php");
   require_once ("db.php");
+  require_once ("php/config.php");
 
   $name = "";
   $user = "";
@@ -10,25 +11,42 @@
   $pass = "";
   $repass = "";
   $lastname = "";
+  $avatarFile = isset($_FILES['avatarFile']) ? $_FILES['avatarFile'] : "";
+  $sexRadioButton = "";
+  $terms = "";
 
+
+  
 if (isLogged()) {
   header("location: homePost.php");exit;
 }
 
+function saveImageOnPath($data) {
+  $oldPath = $data["tmp_name"];
+  $oldName = $data["name"];
+  $extension = pathinfo($oldName, PATHINFO_EXTENSION);
+
+  $newName = uniqid('myfuture-img-') . "." . $extension;
+  $newPath = IMAGE_DIR . $newName;
+
+  move_uploaded_file($oldPath, $newPath);
+  
+
+};
 
 
 
   if ($_POST) {
     $errors = validateRegistration($_POST);
 
-
      if (count($errors) == 0) {
-
+        saveImageOnPath($avatarFile);
        $user = createUser($_POST);
+       $user["avatar"] = $newName;
 
        saveUser($user);
 
-
+      
 
        login($user["email"]);
 
@@ -37,14 +55,12 @@ if (isLogged()) {
      }
 
 
-  // foreach ($errors as $error) {
-  //  echo $error . "<br>";
-  // } //MUESTRO LOS ERRORES CON ESTO
-
   $name = $_POST["name"];
   $user = $_POST["username"];
   $email = $_POST["email"];
   $lastname = $_POST ["last-name"];
+
+ 
 
 
 }
@@ -86,7 +102,7 @@ if (isLogged()) {
   <h2>Registration</h2>
 </div>
 
-<form id="loginform" action="registration.php" method="POST">
+<form id="loginform" action="registration.php" method="POST" enctype="multipart/form-data">
 
   <label class="label" for="">
 <input type="text" class="input" name="name" placeholder="Name" value="<?=$name?>">
@@ -111,8 +127,8 @@ if (isLogged()) {
 <label class="label" for="">
 <input type="text" class="input" name="username" placeholder="User" value="<?=$user?>">
 </label>
-<?php if (isset($errors['user'])) : ?>
-  <p class="errors"><?php echo $errors['user'] ?></p>
+<?php if (isset($errors['username'])) : ?>
+  <p class="errors"><?php echo $errors['username'] ?></p>
 <?php endif; ?>
 
 
@@ -142,17 +158,36 @@ if (isLogged()) {
   <p class="errors"><?php echo $errors['confirm_password'] ?></p>
 <?php endif; ?>
 
-<!-- <label class="label" for=""> I agree with the <a href = "php/terms.php">Terms and conditions</a>
-<input type="checkbox" class="input terms" name="terms" value="">
-</label> -->
+
+<label class="label" for="">
+<input type="file" class="input" name="avatarFile" value="<?=$avatarFile?>" required>
+</label>
+<?php if (isset($errors['avatarFile'])) : ?>
+  <p class="errors"><?php echo $errors['avatarFile'] ?></p>
+<?php endif; ?>
 
 
-<hr>
-<div class='col-md-4'><b>Sex</b><input type=radio name=sex value='male'>Male </font><input type=radio name=sex value='female'>Female</div></div>
 
+<div class="genreBox">
 
+<label class="label" for="">Male
+<input type="radio" class="sex-radioButton" name="genreSex" value="male">
+<label for="label">Female</label>
+<input type="radio" class="sex-radioButton" name="genreSex" value="female">
+</label>
+<?php if (isset($errors['genreSex'])) : ?>
+  <p class="errors"><?php echo $errors['genreSex'] ?></p>
+<?php endif; ?>
+</div>
 
-<div class='row'><div class='col-md-4'><input type=checkbox name=agree value='yes'>I agree to terms and conditions  </div>
+<div  class="termsBox">
+<label class="label" for=""> I agree to <u>terms</u> and <u>conditions</u>
+<input type="checkbox" class="termItem" name="terms">
+</label>
+</div>
+<?php if (isset($errors['terms'])) : ?>
+  <p class="errors"><?php echo $errors['terms'] ?></p>
+<?php endif; ?>
 
 
 

@@ -1,15 +1,9 @@
 
 
 <?php
-include_once ("db.php");
+require_once ("db.php");
 
 session_start();
-
-
-
-
-
-
 
 
   function validateRegistration($data) {
@@ -64,6 +58,26 @@ session_start();
     }
 
 
+    // if ($_FILES["avatarFile"] == "") {
+    //   $errors["avatarFile"] = "Debes subir una imagen para tu proyecto.";
+    // } elseif (!$_FILES["avatarFile"] != UPLOAD_ERR_OK) {
+    //   $errors["avatarFile"] = "Ocurrió un error al subir la imagen del proyecto.";
+    // }
+
+
+    if(!isset($data['genreSex'])){
+        $errors["genreSex"] = "Debes elegir un sexo";
+    }
+
+    if(!isset($data['terms'])){
+        $errors["terms"] = "Debes aceptar los terminos y condiciones";
+    }
+
+
+
+
+
+
 
     return $errors;
 
@@ -84,7 +98,7 @@ session_start();
           $data["password"]));
       }
     }
-    return $errors;
+    return $errors; 
   }
 
   function existPassword($passFromDatabase) {
@@ -136,6 +150,7 @@ session_start();
   function createUser($data) {
     echo ("<pre>");
     var_dump ($data);
+    var_dump ($_FILES);
     echo ("</pre>");
     return [
       "id" => proximoId(),
@@ -144,13 +159,13 @@ session_start();
       "birthday" => $data["birthday"],
       "username" => $data["username"],
       "email" => $data["email"],
-      //"avatar" => $data["avatar"],
-      //"radioButton" => $data["radioButton"],
+     "avatar" => $_FILES["avatarFile"]["tmp_name"],
+     "genreSex" => $data["genreSex"],
       "password" => password_hash($data["password"], PASSWORD_DEFAULT)
-
-
     ];
   }
+
+  
 
 
 
@@ -174,8 +189,8 @@ session_start();
     global $db;
 
 
-    $query = $db->prepare('INSERT INTO myFuture_db.users (name, lastName, birthday, username, email, password)
-    VALUES (:name, :lastName, :birthday, :username, :email, :password)');
+    $query = $db->prepare('INSERT INTO myFuture_db.users (name, lastName, birthday, username, email, password, avatar, genreSex)
+    VALUES (:name, :lastName, :birthday, :username, :email, :password, :avatar, :genreSex)');
 
 
     $query->bindParam(':name', $user['name'], PDO::PARAM_STR);
@@ -183,12 +198,10 @@ session_start();
     $query->bindParam(':birthday', $user['birthday'], PDO::PARAM_STR);
     $query->bindParam(':username', $user['username'], PDO::PARAM_STR);
     $query->bindParam(':email', $user['email'], PDO::PARAM_STR);
-    // $query->bindParam(':avatar', $user['avatar'], PDO::PARAM_STR);
-    // $query->bindParam(':radioButton', $user['radioButton'],PDO::PARAM_STR);
+    $query->bindParam(':avatar', $_FILES['avatarFile']['tmp_name'], PDO::PARAM_STR);
+   $query->bindParam(':genreSex', $user["genreSex"], PDO::PARAM_STR);
     $query->bindParam(':password', $user['password'], PDO::PARAM_STR);
-    
-    // $query->bindParam(':terms', $user['terms'], PDO::PARAM_STR);
-    // $query->bindParam(':condition', $user['terms'], PDO::PARAM_STR);
+
 
 
     $query->execute();
@@ -218,6 +231,8 @@ function logout(){
 
   header("location:index.php");exit;
 }
+
+
 
 
 

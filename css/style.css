@@ -151,9 +151,7 @@ div.titleSidebar {
 
 }
 
-div.profileUserButton {
-  margin-bottom: 80px;
-}
+
 
 div.onlineTitle {
   position: sticky;
@@ -398,8 +396,27 @@ width:270px;
 
 }
 
+div.genreBox {
+ 
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input.sex-radioButton {
+  padding: 50px;
+}
 
 
+div.termsBox {
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+}
+
+.termItem {
+  margin-top: 20px;
+}
 
 
 /***************************
@@ -416,6 +433,7 @@ width:270px;
   color:#333;
   font-size: 14px;
   margin-top:15px;
+  margin-bottom: 10px;
 }
 
 #form {
@@ -476,6 +494,10 @@ font-family: 'Cinzel', serif;
 /***************************
       Profile User
 ****************************/
+
+.profileUserContainer {
+  margin-top: 25px;
+}
 
 div.containerUser{
 
@@ -615,6 +637,40 @@ a.social {
     margin-top: 12px;
   }
 
+
+  div.addPostContainer {
+    display: none;
+  }
+
+   div.addPostContainer i {
+     display: none;
+   }
+
+   div.mobileAddPostContainer {
+    margin-top: 30px;
+   }
+
+   div.mobileAddPostContainer i {
+  
+     font-size: 30px;
+     text-align: right;
+    width: 100%;
+   }
+
+   /*ADD POST */
+   .inputAddPost {
+  padding:15px 25px;
+  font-family: georgia;
+  background: blanchedalmond;
+  border:none;
+  border-radius: 5px;
+  color:#333;
+  font-size: 14px;
+  margin-top:15px;
+  margin-bottom: 10px;
+   }
+  
+
   /*****************
 POSTDETAIL
   ******************/
@@ -728,6 +784,7 @@ li.adminLi:hover {
 /*********** ADD ************/
 
 div.formContainer {
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -846,149 +903,185 @@ button.addButton {
 	font-size: 18px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /***************************
       MEDIA QUIRES
 ****************************/
 
-@media screen and (max-width: 600px){
-
-div.friends-box{
-
-  display: none;
-}
-
-}
 
 
 
 @media screen and (min-width: 510px) {
-
-
-
-div.friends-box {
-
-display: none;
-
-}
-
+  
+  
+  
+  div.friends-box {
+    
+    display: none;
+    
+  }
+  
   .postContainer {
     width: 100%;
-
+    
   }
-
+  
   div.postImage {
-
+    
     width: 100%;
-
-
+    
+    
   }
-
+  
   .postImage img {
-  width: 100%
-
+    width: 100%
+    
   }
-
+  
   .photoContainer img {
     margin-top: 60px;
     height: 260px;
   }
-
+  
   /***************************
-        Profile User
+  Profile User
   ****************************/
-
+  
   main.profileUserContainer {
     display: flex;
-
-
+    
+    
   }
-
+  
   div.lineProfile {
     display: none;
   }
-
-
-
-
+  
+  
+  
+  
   .containerUser {
-  width: 30%;
-
+    width: 30%;
+    
   }
-
+  
   div.postContainerProfile {
     width: 70%;
     margin-top: 100px;
     margin-left: 10px;
-
-
+    
+    
+  }
+  
+  div.containerUser {
+    margin-top: 20px;
   }
 
-div.containerUser {
-  margin-top: 100px;
-}
+    div.addPostContainer {
+      display: block;
+      width: 100%;
+    margin-top: 30px;
+  }
 
-/********************
-homePost
-*********************/
-.img-heart a i, .img-comments a i {
-  font-size: 30px;
+   div.addPostContainer i {
+     display: block;
+      font-size: 30px;
+     text-align: right;
+      width: 100%;
+   }
 
 
-}
+   div.mobileAddPostContainer {
+    display: none;
+   }
 
+   div.mobileAddPostContainer i {
+    display: none;
+   }
+
+   /*Add Post */
+
+   .labelPost {
+ margin-top:20px;
+   }
+
+      .inputAddPost {
+ 
+  margin-bottom: 10px;
+   }
+
+  
+  /********************
+  homePost
+  *********************/
+  .img-heart a i, .img-comments a i {
+    font-size: 30px;
+    
+    
+  }
+  
   /*****************
-POSTDETAIL
+  POSTDETAIL
   ******************/
-
-
-.details-Nick {
+  
+  
+  .details-Nick {
     margin-left: 40px;
-}
-
-.user-Image-Profile {
-
+  }
+  
+  .user-Image-Profile {
+    
     width: 60px;
     margin-top: 3px;
     margin-left: 5px;
     border-radius: 50px;
-
-}
-.comments-Container {
-
-  display: flex;
-  flex-direction: row;
+    
+  }
+  .comments-Container {
+    
+    display: flex;
+    flex-direction: row;
     margin-left: 20px;
-
-
-}
-
-.comments-Container .user-Name {
-  font-size: 20px;
-}
-
-.users-Comments {
-
+    
+    
+  }
+  
+  .comments-Container .user-Name {
+    font-size: 20px;
+  }
+  
+  .users-Comments {
+    
     padding-top: 8px;
     margin-left: 6px;
     font-size: 12px;
-
-}
-
-
-.arrowBack i {
-  font-size: 50px;
-}
-
-/*********** ADD ************/
-
-div.formContainer {
-  width: 80%;
-  margin: 0 auto;
-
-}
-
-
-
+    
+  }
+  
+  
+  .arrowBack i {
+    font-size: 50px;
+  }
+  
+  /*********** ADD ************/
+  
+  div.formContainer {
+    width: 80%;
+    margin: 0 auto;
+    
+  }
+  
+  
+  
 }
 
 
@@ -996,124 +1089,143 @@ div.formContainer {
   footer {
     display: none;
   }
-
- .photoContainer img {
-   margin-top: 10px;
-   height: 260px;
- }
-
-  .postContainer:nth-child(1n) {
-
-    margin-top: 50px;
-
+  
+  .photoContainer img {
+    margin-top: 10px;
+    height: 260px;
   }
-
-
+  
+  .postContainer:nth-child(1n) {
+    
+    margin-top: 50px;
+    
+  }
+  
+  
   .postContainer {
     margin-top: 0;
     width: 50%;
-
-
+    
+    
   }
-
-
-
+  
+  
+  
   .postImage img {
-  width: 100%;
+    width: 100%;
+    
+  }
+  
+  div.friends-box{
+    display: block;
+    border-radius: 5px;
+    
+  }
+  
+  
+  /*
+  PROFILEUSER
+  */
+  
+  main.profileUserContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  div.postContainerProfile {
+    margin-left: 50px;
+  }
+  
+  div.containerUser {
+    margin-left: 100px;
+  }
+  
+  .title h1 {
+    margin: 0 auto;
+    width: 300px;
+    color: black;
+    
+  }
+  
 
+  
+  
+  /*****************
+  POSTDETAIL
+  ******************/
+  
+  
+  
+  
+  .user-Image-Profile {
+    
+    width: 70px;
+    
+    border-radius: 30px;
+    
+  }
+  
+  
+  .comments-Container .user-Name {
+    font-size: 20px;
+  }
+  
+  .users-Comments {
+    font-size: 18px;
+    
+  }
+  
+  
+  /********************
+  homePost
+  *********************/
+  
+  
+  .img-heart a i, .img-comments a i {
+    font-size: 40px;
+  }
+  
+  .postContainer {
+    position: relative;
+    margin-right: 20px;
+    width: 70%;
+  }
+  
+  .postDetailContainer {
+    margin: 0 auto;
+  }
+  
+  /*********** ADD ************/
+  
+  div.formContainer {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+  }
+  
+  
+}
+
+
+
+
+
+
+/* MAX WIDTH POR LA BARRA */
+/* TODO: FIX THIS LATER ESTA EN MAX WIDTH PORQUE ESTA BARRA PRIMERO ESTA HECHO CON MOBILE-LAST */
+  @media screen and (max-width: 600px){
+  
+  div.friends-box{
+  
+    display: none;
   }
 
-div.friends-box{
-  display: block;
-  border-radius: 5px;
-
-}
-
-
-/*
-PROFILEUSER
-*/
-
-main.profileUserContainer {
-  width: 80%;
-  margin: 0 auto;
-}
-
-div.postContainerProfile {
-  margin-left: 50px;
-}
-
-div.containerUser {
-  margin-left: 100px;
-}
-
-.title h1 {
-  margin: 0 auto;
-  width: 300px;
-  color: black;
-
-}
-
-
-
-  /*****************
-POSTDETAIL
-  ******************/
-
-
-
-
-.user-Image-Profile {
-
-    width: 70px;
-
-    border-radius: 30px;
-
-}
-
-
-.comments-Container .user-Name {
-  font-size: 20px;
-}
-
-.users-Comments {
-    font-size: 18px;
-
-}
-
-
-/********************
-homePost
-*********************/
-
-
-.img-heart a i, .img-comments a i {
-  font-size: 40px;
-}
-
-.postContainer {
-  position: relative;
-  margin-right: 20px;
-  width: 70%;
-}
-
-.postDetailContainer {
-  margin: 0 auto;
-}
-
-/*********** ADD ************/
-
-div.formContainer {
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 10px;
-
-}
-
-
-}
-
-/* TODO: FIX THIS LATER ESTA EN MAX WIDTH PORQUE ESTA BARRA PRIMERO ESTA HECHO CON MOBILE-LAST */
+  
+  
+  
+  
+  }
 
 @media screen and (max-width: 900px) {
   .sidebar {
@@ -1122,19 +1234,23 @@ div.formContainer {
     height: 14vh;
     justify-content: space-between;
     align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 
+    
   }
-
+  
   .sidebar a {
     flex-direction: row;
-
+    
   }
-
+  
   div.contactsContainer, div.onlineTitle, div.offlineTitle, div.titleSidebar {
     display: none;
   }
-
-
-
-
+  
+  
+  
+  
 }

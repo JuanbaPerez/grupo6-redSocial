@@ -1,6 +1,6 @@
 <?php
 
-require_once("php/funciones.php");
+require_once ("php/funciones.php");
 
 if ($_POST) {
   $errors = validateLogin($_POST);
@@ -62,6 +62,7 @@ if (isLogged()) {
   <label class="label" for="">
 <input type="text" class="input" name="email" placeholder="E-mail">
 </label>
+
 
 <br>
 
