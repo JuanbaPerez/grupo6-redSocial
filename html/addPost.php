@@ -9,8 +9,6 @@ require_once ("php/postFunctions.php");
 
 
 
-
-
 if ($_POST) {
     // echo ("<pre>");
     // var_dump($_FILES);
@@ -72,7 +70,7 @@ if ($_POST) {
 <div class="formContainer">
 
     <label class="labelPost" for="">Carga tu imagen aqui!
-        <input type="file" class="inputAddPost" name="imageFilePost" value="<?=$imageFile?>" required>
+        <input type="file" class="inputAddPost" name="imageFilePost" value="<?=$imageFile?>" required accept="image/png, image/jpeg, image/jpg">
     </label>
 
     <label class="label"></label>

@@ -160,7 +160,7 @@ function saveImageOnPath($data) {
 
 
 <label class="label" for="">
-<input type="file" class="input" name="avatarFile" value="<?=$avatarFile?>" required>
+<input type="file" class="input" name="avatarFile" value="<?=$avatarFile?>" required accept="image/png, image/jpeg, image/jpg">
 </label>
 <?php if (isset($errors['avatarFile'])) : ?>
   <p class="errors"><?php echo $errors['avatarFile'] ?></p>
