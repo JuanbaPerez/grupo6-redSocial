@@ -32,7 +32,7 @@ function saveImageOnPath($data) {
   move_uploaded_file($oldPath, $newPath);
   
 
-};
+}
 
 
 

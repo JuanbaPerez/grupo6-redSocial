@@ -6,17 +6,14 @@ require_once ("php/postFunctions.php");
 
  $imageFile = isset($_FILES['imageFilePost']) ? $_FILES['imageFilePost'] : "";
 
-
-
-
 if ($_POST) {
     // echo ("<pre>");
     // var_dump($_FILES);
     // var_dump($_POST);exit;
     // echo ("</pre>");
     $newPost = createPost($_POST);
-    savePathPostImage($imageFile);
-    $newPost["imageFilePost"] = $newNameImg;
+    
+    $newPost["imageFilePost"] = savePathPostImage($imageFile);
 
     if (addPost($newPost) == true) {
         echo ("No se pudo agregar el post");
