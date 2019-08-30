@@ -15,14 +15,14 @@
 
 <?php
 
-  include_once ("php/sidebar.php")
+  include_once ("../partials/sidebar.php")
 
  ?>
 
 
 <section>
   <div class="photoContainer">
-    <img src="../img/logo.png" alt="logo">
+    <img src="../data/img/logo.png" alt="logo">
   </div>
 
 <div class="title">
@@ -30,7 +30,7 @@
 </div>
 
 
-<form id="form" action="login.html" method="post">
+<form id="form" action="contact.php" method="post">
   <label class="label" for="">
 <input type="text" class="input" name="email" placeholder="First Name">
 </label>
@@ -68,7 +68,7 @@
 
 <?php
 
-  include_once ("php/footer.php")
+  include_once ("../partials/footer.php")
 
  ?>
 
@@ -77,37 +77,3 @@
   </div>
 </html>
 
-
-<!--
- <div class="row">
-   <div class="column">
-     <img src="/w3images/map.jpg" style="width:100%">
-   </div>
-   <div class="column">
--->
-
-      <!--
-     <form action="/action_page.php">
-       <label for="fname">First Name</label>
-       <input type="text" id="fname" name="firstname" placeholder="Your name..">
-       <label for="lname">Last Name</label>
-       <input type="text" id="lname" name="lastname" placeholder="Your last name..">
--->
-       <!--
-       <label for="country">Country</label>
-       <select id="country" name="country">
-         <option value="australia">Australia</option>
-         <option value="canada">Canada</option>
-         <option value="usa">USA</option>
-       </select>
-       -->
-
-<!--
-       <label for="subject">Subject</label>
-       <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-       <input type="submit" value="Submit">
-     </form>
-   </div>
- </div>
-</div>
--->

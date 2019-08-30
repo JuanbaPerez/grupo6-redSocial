@@ -1,11 +1,11 @@
 
 
 <div class="sidebar">
-<a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
-<a href="contact.php"><i class="fa fa-at"></i> Contact</a>
-<a href="login.php"><i class="fa fa-fw fa-user"></i> Log In</a>
-<a href="registration.php"><i class="fa fa-bullseye"></i> Register</a>
-<a href="FAQ.php"><i class="fa fa-question"></i>  FAQ</a>
+<a href="../views/index.php"><i class="fa fa-fw fa-home"></i> Home</a>
+<a href="../views/contact.php"><i class="fa fa-at"></i> Contact</a>
+<a href="../views/login.php"><i class="fa fa-fw fa-user"></i> Log In</a>
+<a href="../views/registration.php"><i class="fa fa-bullseye"></i> Register</a>
+<a href="../views/FAQ.php"><i class="fa fa-question"></i>  FAQ</a>
 
 
 <div class="titleSidebar">
@@ -13,11 +13,11 @@
   </div>
 
 <div class="StartButton">
-    <a href="../html/homePost.php">Start</a>
+    <a href="../views/homePost.php">Start</a>
 </div>
 
 <div class="profileUserButton">
-    <a href="../html/profileuser.php">Profile</a>
+    <a href="../views/profileuser.php">Profile</a>
 </div>
 
 
@@ -31,8 +31,8 @@
     <div class="contactInfo">
 
       <div class="photoContact">
-        <a href="../html/profileuser.php">
-          <img src="../img/paco.jpg" alt="">
+        <a href="../views/profileuser.php">
+          <img src="../data/img/paco.jpg" alt="">
         </a>
       </div>
 
@@ -51,7 +51,7 @@
 
         <div class="photoContact">
           <a href="#">
-            <img src="../img/franky.jpg" alt="">
+            <img src="../data/img/franky.jpg" alt="">
           </a>
         </div>
 
@@ -70,7 +70,7 @@
 
           <div class="photoContact">
             <a href="#">
-              <img src="../img/profilepic.jpg" alt="">
+              <img src="../data/img/profilepic.jpg" alt="">
             </a>
           </div>
 
@@ -89,7 +89,7 @@
 
             <div class="photoContact">
               <a href="#">
-                <img src="../img/paco.jpg" alt="">
+                <img src="../data/img/paco.jpg" alt="">
               </a>
             </div>
 
@@ -108,7 +108,7 @@
 
               <div class="photoContact">
                 <a href="#">
-                  <img src="../img/franky.jpg" alt="">
+                  <img src="../data/img/franky.jpg" alt="">
                 </a>
               </div>
 
@@ -127,7 +127,7 @@
 
                 <div class="photoContact">
                   <a href="#">
-                    <img src="../img/profilepic.jpg" alt="">
+                    <img src="../data/img/profilepic.jpg" alt="">
                   </a>
                 </div>
 
@@ -152,7 +152,7 @@
 
           <div class="photoContact">
             <a href="#">
-              <img src="../img/profilepic.jpg" alt="">
+              <img src="../data/img/profilepic.jpg" alt="">
             </a>
           </div>
 

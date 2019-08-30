@@ -1,6 +1,6 @@
 <?php
 
-require_once ("php/funciones.php");
+require_once ("../partials/funciones.php");
 
 if ($_POST) {
   $errors = validateLogin($_POST);
@@ -41,14 +41,14 @@ if (isLogged()) {
 
     <?php
 
-      include_once ("php/sidebar.php")
+      include_once ("../partials/sidebar.php")
 
      ?>
 
 <section>
 
   <div class="photoContainer">
-    <img src="../img/logo.png" alt="logo">
+    <img src="../data/img/logo.png" alt="logo">
   </div>
 
 
@@ -84,7 +84,7 @@ if (isLogged()) {
 
 <?php
 
-  include_once ("php/footer.php")
+  include_once ("../partials/footer.php")
 
  ?>
 

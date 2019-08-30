@@ -15,12 +15,12 @@
 
     <?php
 
-    include_once ("php/sidebar.php");
+    include_once ("../partials/sidebar.php");
 
      ?>
 
      <div class="photoContainer">
-       <img src="../img/logo.png" alt="logo logFoto">
+       <img src="../data/img/logo.png" alt="logo logFoto">
 
        <div class="titleHome title">
          <h1>MyFuture</h1>
@@ -38,7 +38,7 @@
 
     <div class="card">
       <div class="imageUser">
-          <img src="../img/paco.jpg" alt="Paco">
+          <img src="../data/img/paco.jpg" alt="Paco">
         </div>
         <h1>Paco Amoroso</h1>
       <p class="titleUser">Trappin</p>
@@ -73,7 +73,7 @@
 
       <div class="single-img">
 
-        <img src="../img/nochefotos.jpg" alt="postFoto">
+        <img src="../data/img/nochefotos.jpg" alt="postFoto">
 
         <div class="img-overlay">
 
@@ -98,7 +98,7 @@
 
       <div class="single-img">
 
-        <img src="../img/retro.jpg" alt="postFoto">
+        <img src="../data/img/retro.jpg" alt="postFoto">
 
         <div class="img-overlay">
 
@@ -123,7 +123,7 @@
 
       <div class="single-img">
 
-        <img src="../img/pantano.jpg" alt="postFoto">
+        <img src="../data/img/pantano.jpg" alt="postFoto">
 
         <div class="img-overlay">
 
@@ -148,7 +148,7 @@
 
       <div class="single-img">
 
-        <img src="../img/future.jpg" alt="postFoto">
+        <img src="../data/img/future.jpg" alt="postFoto">
 
         <div class="img-overlay">
 
@@ -173,7 +173,7 @@
 
       <div class="single-img">
 
-        <img src="../img/tree.jpg" alt="postFoto">
+        <img src="../data/img/tree.jpg" alt="postFoto">
 
         <div class="img-overlay">
 
@@ -215,7 +215,7 @@
 
   <?php
 
-  include_once ("php/footer.php");
+  include_once ("../partials/footer.php");
 
    ?>
   </body>

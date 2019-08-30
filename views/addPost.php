@@ -1,7 +1,7 @@
 <?php
-require_once ("db.php");
-require_once ("php/postFunctions.php");
-  require_once ("php/config.php");
+require_once ("../partials/db.php");
+require_once ("../partials/postFunctions.php");
+  require_once ("../partials/config.php");
 
 
  $imageFile = isset($_FILES['imageFilePost']) ? $_FILES['imageFilePost'] : "";
@@ -47,13 +47,13 @@ if ($_POST) {
 <header>
     <?php
 
-    require_once ("php/sidebar.php")
+    require_once ("../partials/sidebar.php")
 
         ?>
     </header>
 
        <div class="photoContainer">
-       <img src="../img/logo.png" alt="logo logFoto">
+       <img src="../data/img/logo.png" alt="logo logFoto">
 
        <div class="titleHome title">
          <h1>MyFuture</h1>

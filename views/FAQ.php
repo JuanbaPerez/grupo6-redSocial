@@ -14,12 +14,12 @@
 
   <?php
 
-    include_once ("php/sidebar.php")
+    include_once ("../partials/sidebar.php")
 
    ?>
 
 <div class="photoContainer">
-  <img src="../img/logo.png" alt="logo">
+  <img src="../data/img/logo.png" alt="logo">
 </div>
 
   <div class="title faqTitle">
@@ -42,7 +42,7 @@
 
   <?php
 
-    include_once ("php/footer.php")
+    include_once ("../partials/footer.php")
 
    ?>
 

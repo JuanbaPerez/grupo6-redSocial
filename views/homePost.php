@@ -19,7 +19,7 @@
 
       <?php
 
-        include_once ("php/sidebar.php")
+        include_once ("../partials/sidebar.php")
 
        ?>
     </header>
@@ -31,7 +31,7 @@
 
 
     <div class="photoProfileContainer">
-      <img class="profilePicture" src="../img/profilepic.jpg" alt="profile">
+      <img class="profilePicture" src="../data/img/profilepic.jpg" alt="profile">
 
       <div class="userName">
         <h2>Marcelo Diaz</h2>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="postImage">
-        <img src="../img/nochefotos.jpg" alt="postFoto">
+        <img src="../data/img/nochefotos.jpg" alt="postFoto">
     </div>
 
 
@@ -81,7 +81,7 @@
     </div>
 
     <div class="postImage">
-        <img src="../img/pantano.jpg" alt="postFoto">
+        <img src="../data/img/pantano.jpg" alt="postFoto">
     </div>
 
 
@@ -120,7 +120,7 @@
     </div>
 
     <div class="postImage">
-        <img src="../img/nochefotos.jpg" alt="postFoto">
+        <img src="../data/img/nochefotos.jpg" alt="postFoto">
     </div>
 
 
@@ -159,7 +159,7 @@
     </div>
 
     <div class="postImage">
-        <img src="../img/pantano.jpg" alt="postFoto">
+        <img src="../data/img/pantano.jpg" alt="postFoto">
     </div>
 
 
@@ -190,7 +190,7 @@
 
 <?php
 
-  include_once ("php/footer.php")
+  include_once ("../partials/footer.php")
 
  ?>
 

@@ -27,7 +27,7 @@
 
 
       <div class="photoProfileContainer">
-        <img class="profilePicture" src="../img/profilepic.jpg" alt="profile">
+        <img class="profilePicture" src="../data/img/profilepic.jpg" alt="profile">
 
         <div class="userName">
           <h2>Marcelo Diaz</h2>
@@ -37,11 +37,11 @@
       </div>
 
       <div class="postImage">
-          <img src="../img/nochefotos.jpg" alt="postFoto">
+          <img src="../data/img/nochefotos.jpg" alt="postFoto">
       </div>
   <div class="details-Comments">
     <div class="photoProfileContainer">
-      <img class="profilePicture" src="../img/profilepic.jpg" alt="profile">
+      <img class="profilePicture" src="../data/img/profilepic.jpg" alt="profile">
 
     <div class="details-Nick">
       <h2>Marcelo Díaz</h2>
@@ -61,7 +61,7 @@
 <div class="user-Details-Container">
 
 <div class="user-Image-Profile">
-  <img class="user-Image-Profile" src="../img/profilepic.jpg" alt="profile">
+  <img class="user-Image-Profile" src="../data/img/profilepic.jpg" alt="profile">
 </div>
 
   <div class="comments-Container">
@@ -74,7 +74,7 @@
 <div class="user-Details-Container">
 
 <div class="user-Image-Profile">
-  <img class="user-Image-Profile" src="../img/profilepic.jpg" alt="profile">
+  <img class="user-Image-Profile" src="../data/img/profilepic.jpg" alt="profile">
 </div>
 
   <div class="comments-Container">
@@ -87,7 +87,7 @@
 <div class="user-Details-Container">
 
 <div class="user-Image-Profile">
-  <img class="user-Image-Profile" src="../img/profilepic.jpg" alt="profile">
+  <img class="user-Image-Profile" src="../data/img/profilepic.jpg" alt="profile">
 </div>
 
   <div class="comments-Container">

@@ -18,7 +18,7 @@
 
     <?php
 
-      include_once ("php/sidebar.php")
+      include_once ("../partials/sidebar.php")
 
      ?>
   </header>
@@ -27,7 +27,7 @@
 
 
 
-  <img src="../img/logo.png" alt="logo logFoto">
+  <img src="../data/img/logo.png" alt="logo logFoto">
 </div>
 
 <main>
@@ -50,7 +50,7 @@
 
 <?php
 
-  include_once ("php/footer.php")
+  include_once ("../partials/footer.php")
 
  ?>
 

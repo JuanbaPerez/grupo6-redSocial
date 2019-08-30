@@ -1,9 +1,9 @@
 
 <?php
 
-  require_once ("php/funciones.php");
-  require_once ("db.php");
-  require_once ("php/config.php");
+  require_once ("../partials/funciones.php");
+  require_once ("../partials/db.php");
+  require_once ("../partials/config.php");
 
   $name = "";
   $user = "";
@@ -86,7 +86,7 @@ function saveImageOnPath($data) {
   <body>
     <?php
 
-      include ("php/sidebar.php")
+      include ("../partials/sidebar.php")
 
      ?>
 
@@ -94,7 +94,7 @@ function saveImageOnPath($data) {
 
 
   <div class="photoContainer">
-    <img src="../img/logo.png" alt="logo">
+    <img src="../data/img/logo.png" alt="logo">
 
   </div>
 
@@ -191,40 +191,14 @@ function saveImageOnPath($data) {
 
 
 
-
-
-
-
-<button type="submit" class="buttonPages">Registrer!</button>
-
-
+  <button type="submit" class="buttonPages">Registrer!</button>
 </form>
-
-
-
-
-
-
-
-
-
 </section>
-
-
 <?php
 
-  include_once ("php/footer.php")
+  include_once ("../partials/footer.php")
 
  ?>
-
-
-
-
-
-
-
-
-
   </body>
   </div>
 </html>
