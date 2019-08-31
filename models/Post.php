@@ -54,7 +54,7 @@ public function setCommentId($comment_id)
 public function getCommentId()
 {
 
-  return $this->$comment_id;
+  return $this->comment_id;
 }
 
 
@@ -66,7 +66,7 @@ public function setUserId($user_id)
 public function getUserId()
 {
 
-  return $this->$user_id;
+  return $this->user_id;
 }
 
 

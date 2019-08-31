@@ -55,7 +55,7 @@ public function setEmail($email)
 public function getEmail()
 {
 
-  return $this->$email;
+  return $this->email;
 }
 
 
