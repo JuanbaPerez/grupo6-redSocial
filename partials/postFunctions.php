@@ -17,6 +17,41 @@ function addPost($post) {
   $query->execute();
 }
 
+
+function bringPostByUserId () {
+
+global $db;
+
+$query = $db->prepare("SELECT * FROM myFuture_db.posts
+                      LEFT JOIN myFuture_db.users ON posts.id = users.post_id");
+$query->execute();
+
+
+
+$posts = $query->fetch(PDO::FETCH_ASSOC);
+
+
+$postObject = [];
+
+foreach ($posts as $post) {
+    $finalPost = new Post($post['image'], $post['footerText']);
+
+    $finalPost->setId($post["id"]);
+    $finalPost->setCommentId($post["comment_id"]);
+    $finalPost->setPostOptionsId($post["postOptions_id"]);
+    $finalPost->setUserId($post["user_id"]);
+    
+
+    $postObject[] = $finalPost;
+
+}
+
+
+return $postObject;
+
+
+}
+
 function bringAllPosts() {
   global $db;
   $query = $db-> prepare('SELECT * FROM myFuture_db.posts');

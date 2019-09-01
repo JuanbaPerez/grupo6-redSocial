@@ -1,3 +1,14 @@
+<?php
+
+require_once ("../partials/postFunctions.php");
+require_once ("../models/Post.php");
+require_once ("../models/User.php");
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
@@ -41,7 +52,21 @@
     </div>
 
     <div class="postImage">
-        <img src="../data/img/nochefotos.jpg" alt="postFoto">
+        <!--
+          <img src="../data/img/nochefotos.jpg" alt="postFoto">
+        -->
+
+        <?php
+
+    $posts = bringPostByUserId();
+
+      foreach ($posts as $post) {
+        echo $post->getImage(); echo ("<br>");
+ 
+  
+      }
+
+        ?>
     </div>
 
 
@@ -197,3 +222,4 @@
 
   </body>
 </html>
+
