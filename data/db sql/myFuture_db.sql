@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-08-2019 a las 06:14:48
+-- Tiempo de generación: 04-09-2019 a las 00:59:50
 -- Versión del servidor: 10.1.40-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -55,12 +55,12 @@ CREATE TABLE `postOptions` (
 --
 
 CREATE TABLE `posts` (
-  `id` int(11) NOT NULL,
-  `image` varchar(255) DEFAULT NULL,
+  `id` int(11) UNSIGNED NOT NULL,
+  `image` varchar(255) NOT NULL,
   `footerText` varchar(255) DEFAULT NULL,
   `comment_id` int(11) DEFAULT NULL,
   `postOptions_id` varchar(45) DEFAULT NULL,
-  `user_id` varchar(45) DEFAULT NULL
+  `user_id` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -68,15 +68,17 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `image`, `footerText`, `comment_id`, `postOptions_id`, `user_id`) VALUES
-(39, 'pwn-logo.png', 'VAMAA', NULL, NULL, NULL),
-(40, 'pwn-logo.png', 'VAMAA', NULL, NULL, NULL),
-(41, 'pwn-logo.png', 'VAMAA', NULL, NULL, NULL),
-(42, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, NULL),
-(43, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, NULL),
-(44, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, NULL),
-(45, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, NULL),
-(46, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, NULL),
-(47, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, NULL);
+(39, 'pwn-logo.png', 'VAMAA', NULL, NULL, 0),
+(40, 'pwn-logo.png', 'VAMAA', NULL, NULL, 0),
+(41, 'pwn-logo.png', 'VAMAA', NULL, NULL, 0),
+(42, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, 0),
+(43, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, 0),
+(44, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, 0),
+(45, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, 0),
+(46, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, 0),
+(47, 'nube-espacial-3192.jpg', 'asdas', NULL, NULL, 0),
+(48, 'nube-espacial-3192.jpg', 'asd', NULL, NULL, 0),
+(49, 'pwn-logo.png', 'asd', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -113,7 +115,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastName`, `birthday`, `username`, `email`, `password`, `avatar`, `genreSex`) VALUES
-(20, 'Juanbaaaa', 'Asdasdad', '1997-11-28', 'JuanbaPerez', 'Juanba12@hotmail.com', '$2y$10$zO6/lCWoBUW2AY6S0zdhW.gQSQM/2cOx/JN68k1SVPiVTWadRvzz6', '/opt/lampp/temp/php5KqRox', 'male');
+(20, 'Juanbaaaa', 'Asdasdad', '1997-11-28', 'JuanbaPerez', 'Juanba12@hotmail.com', '$2y$10$zO6/lCWoBUW2AY6S0zdhW.gQSQM/2cOx/JN68k1SVPiVTWadRvzz6', '/opt/lampp/temp/php5KqRox', 'male'),
+(21, 'Juanbaaaa', 'Asdasdad', '1997-11-28', 'JuanbaPerez', 'Juanba58@hotmail.com', '$2y$10$nb.BGcUzZ8BA3RWEPuvq8.9F/iS7T4DFZ8dj3UFAsFzN5LQZbbCf2', '/opt/lampp/temp/phpnb9eYB', 'male');
 
 -- --------------------------------------------------------
 
@@ -177,13 +180,13 @@ ALTER TABLE `users_users`
 -- AUTO_INCREMENT de la tabla `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

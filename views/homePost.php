@@ -10,6 +10,7 @@ require_once ("../models/User.php");
 
 
 <!DOCTYPE html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,205 +22,214 @@ require_once ("../models/User.php");
 
 
 
-  <body>
+<body>
 
 
 
 
-    <header>
+  <header>
 
-      <?php
+    <?php
 
-        include_once ("../partials/sidebar.php")
+    include_once ("../partials/sidebar.php")
 
-       ?>
-    </header>
+    ?>
+  </header>
 
-    <main class="homePostBody">
-
-
-  <div class="postContainer">
+  <main class="homePostBody">
 
 
-    <div class="photoProfileContainer">
-      <img class="profilePicture" src="../data/img/profilepic.jpg" alt="profile">
+    <div class="postContainer">
 
-      <div class="userName">
-        <h2>Marcelo Diaz</h2>
-        <p>1hs</p>
+
+      <div class="photoProfileContainer">
+        <!--<img class="profilePicture" src="../data/img/profilepic.jpg" alt="profile">  Aca creo que iria User->getAvatar !-->
+        <?php
+        echo ("<img class='profilePicture' src='User->getAvatar()' alt='profile'>");
+        ?>
+
+        <div class="userName">
+          <h2>Marcelo Diaz</h2> <!-- User->getName !-->
+          <p>1hs</p>
+        </div>
+
       </div>
 
-    </div>
-
-    <div class="postImage">
+      <div class="postImage">
         <!--
-          <img src="../data/img/nochefotos.jpg" alt="postFoto">
+          <img src="../data/img/nochefotos.jpg" alt="postFoto">   Post->getImage??
         -->
 
         <?php
 
-    $posts = bringPostByUserId();
+        $posts = bringPostByUserId();
+        
+        foreach ($posts as $post) {
+          echo $post->getUserId();
+  echo ("<br>");
+          echo $post->getFooterText() ; echo("<br>");
+          echo $post->getImage();
+          echo ("<br>");
+  echo ("<br>");
+        }
 
-      foreach ($posts as $post) {
-        echo $post->getImage(); echo ("<br>");
- 
-  
-      }
+
+
 
         ?>
-    </div>
-
-
-<div class="postIcons">
-
-  <div class="postIcons-heart">
-    <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 38</i></button>
-
-  </div>
-
-
-  <div class="postIcons-comment">
-
-    <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 5</i></button>
-
-  </div>
-</div>
-
-
-
-
-
-  </div>
-
-
-  <div class="postContainer">
-
-
-    <div class="photoProfileContainer">
-      <img class="profilePicture" src="../img/franky.jpg" alt="profile">
-
-      <div class="userName">
-        <h2>Franky Funk</h2>
-        <p>30 minutes</p>
       </div>
 
+
+      <div class="postIcons">
+
+        <div class="postIcons-heart">
+          <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 38</i></button>
+
+        </div>
+
+
+        <div class="postIcons-comment">
+
+          <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 5</i></button>
+
+        </div>
+      </div>
+
+
+
+
+
     </div>
 
-    <div class="postImage">
+
+    <div class="postContainer">
+
+
+      <div class="photoProfileContainer">
+        <img class="profilePicture" src="../img/franky.jpg" alt="profile">
+
+        <div class="userName">
+          <h2>Franky Funk</h2>
+          <p>30 minutes</p>
+        </div>
+
+      </div>
+
+      <div class="postImage">
         <img src="../data/img/pantano.jpg" alt="postFoto">
-    </div>
-
-
-<div class="postIcons">
-
-  <div class="postIcons-heart">
-    <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 30</i></button>
-
-  </div>
-
-
-  <div class="postIcons-comment">
-
-    <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 12</i></button>
-
-  </div>
-</div>
-
-
-
-
-
-  </div>
-
-  <div class="postContainer">
-
-
-    <div class="photoProfileContainer">
-      <img class="profilePicture" src="../img/profilepic.jpg" alt="profile">
-
-      <div class="userName">
-        <h2>Marcelo Diaz</h2>
-        <p>1hs</p>
       </div>
 
+
+      <div class="postIcons">
+
+        <div class="postIcons-heart">
+          <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 30</i></button>
+
+        </div>
+
+
+        <div class="postIcons-comment">
+
+          <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 12</i></button>
+
+        </div>
+      </div>
+
+
+
+
+
     </div>
 
-    <div class="postImage">
+    <div class="postContainer">
+
+
+      <div class="photoProfileContainer">
+        <img class="profilePicture" src="../img/profilepic.jpg" alt="profile">
+
+        <div class="userName">
+          <h2>Marcelo Diaz</h2>
+          <p>1hs</p>
+        </div>
+
+      </div>
+
+      <div class="postImage">
         <img src="../data/img/nochefotos.jpg" alt="postFoto">
-    </div>
-
-
-<div class="postIcons">
-
-  <div class="postIcons-heart">
-    <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 38</i></button>
-
-  </div>
-
-
-  <div class="postIcons-comment">
-
-    <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 5</i></button>
-
-  </div>
-</div>
-
-
-
-
-  </div>
-
-
-  <div class="postContainer">
-
-
-    <div class="photoProfileContainer">
-      <img class="profilePicture" src="../img/franky.jpg" alt="profile">
-
-      <div class="userName">
-        <h2>Franky Funk</h2>
-        <p>30 minutes</p>
       </div>
 
+
+      <div class="postIcons">
+
+        <div class="postIcons-heart">
+          <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 38</i></button>
+
+        </div>
+
+
+        <div class="postIcons-comment">
+
+          <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 5</i></button>
+
+        </div>
+      </div>
+
+
+
+
     </div>
 
-    <div class="postImage">
+
+    <div class="postContainer">
+
+
+      <div class="photoProfileContainer">
+        <img class="profilePicture" src="../img/franky.jpg" alt="profile">
+
+        <div class="userName">
+          <h2>Franky Funk</h2>
+          <p>30 minutes</p>
+        </div>
+
+      </div>
+
+      <div class="postImage">
         <img src="../data/img/pantano.jpg" alt="postFoto">
-    </div>
+      </div>
 
 
-<div class="postIcons">
+      <div class="postIcons">
 
-  <div class="postIcons-heart">
-    <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 30</i></button>
+        <div class="postIcons-heart">
+          <button class="buttons" type="button" name="button"><i class="fa fa-heart"> 30</i></button>
 
-  </div>
-
-
-  <div class="postIcons-comment">
-
-    <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 12</i></button>
-
-  </div>
-</div>
+        </div>
 
 
+        <div class="postIcons-comment">
 
+          <button class="buttons" type="button" name="button"><i class="fa fa-comment"> 12</i></button>
+
+        </div>
+      </div>
 
 
 
 
-</main>
 
 
 
-<?php
-
-  include_once ("../partials/footer.php")
-
- ?>
+  </main>
 
 
-  </body>
+
+  <?php
+
+  include_once("../partials/footer.php")
+
+  ?>
+
+
+</body>
+
 </html>
-

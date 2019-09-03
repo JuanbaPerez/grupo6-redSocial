@@ -58,6 +58,14 @@ public function getEmail()
   return $this->email;
 }
 
+public function getAvatar() {
+  return $this->avatar;
+}
+
+public function setAvatar($avatar) {
+  return $this->avatar = $avatar;
+}
+
 
 
 }

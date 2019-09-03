@@ -1,12 +1,16 @@
 <?php
 
 require_once ("db.php");
+require_once ("../models/User.php");
+require_once ("../models/Post.php");
+
 
 function addPost($post) {
   global $db;
 
   $query = $db->prepare('INSERT INTO myFuture_db.posts (image, footerText)
   VALUES (:image, :footerText)');
+
 
   $query->bindParam(':image', $_FILES['imageFilePost']["name"], PDO::PARAM_STR);
   $query->bindParam(':footerText', $post['footerTextAreaPost'], PDO::PARAM_STR);
@@ -22,30 +26,29 @@ function bringPostByUserId () {
 
 global $db;
 
-$query = $db->prepare("SELECT * FROM myFuture_db.posts
-                      LEFT JOIN myFuture_db.users ON posts.id = users.post_id");
+$query = $db->prepare("SELECT * 
+FROM 
+  myFuture_db.posts
+
+  LEFT JOIN myFuture_db.users ON posts.user_id = users.id");
+
 $query->execute();
 
 
-
-$posts = $query->fetch(PDO::FETCH_ASSOC);
-
+$posts = $query->fetchAll(PDO::FETCH_ASSOC);
 
 $postObject = [];
 
 foreach ($posts as $post) {
-    $finalPost = new Post($post['image'], $post['footerText']);
+  $finalPost = New Post($post["image"], $post["footerText"]);
+  $finalPost->setId($post["id"]);
+  $finalPost->setUserId($post["user_id"]);
 
-    $finalPost->setId($post["id"]);
-    $finalPost->setCommentId($post["comment_id"]);
-    $finalPost->setPostOptionsId($post["postOptions_id"]);
-    $finalPost->setUserId($post["user_id"]);
-    
+  $postObject[] = $finalPost;
 
-    $postObject[] = $finalPost;
+
 
 }
-
 
 return $postObject;
 
