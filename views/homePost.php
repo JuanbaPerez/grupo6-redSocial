@@ -65,12 +65,12 @@ require_once ("../models/User.php");
         $posts = bringPostByUserId();
         
         foreach ($posts as $post) {
+          echo ("<br>");
           echo $post->getUserId();
   echo ("<br>");
           echo $post->getFooterText() ; echo("<br>");
           echo $post->getImage();
           echo ("<br>");
-  echo ("<br>");
         }
 
 

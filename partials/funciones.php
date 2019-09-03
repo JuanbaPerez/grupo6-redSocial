@@ -198,7 +198,7 @@ session_start();
     $query->bindParam(':birthday', $user['birthday'], PDO::PARAM_STR);
     $query->bindParam(':username', $user['username'], PDO::PARAM_STR);
     $query->bindParam(':email', $user['email'], PDO::PARAM_STR);
-    $query->bindParam(':avatar', $_FILES['avatarFile']['tmp_name'], PDO::PARAM_STR);
+    $query->bindParam(':avatar', $_FILES['avatarFile']['name'], PDO::PARAM_STR);
    $query->bindParam(':genreSex', $user["genreSex"], PDO::PARAM_STR);
     $query->bindParam(':password', $user['password'], PDO::PARAM_STR);
 
@@ -232,14 +232,19 @@ function logout(){
   header("location:index.php");exit;
 }
 
+function saveImageOnPath($file)
+{
+  $oldPath = $file["tmp_name"];
+  $oldName = $file["name"];
+  $extension = pathinfo($oldName, PATHINFO_EXTENSION);
 
+  $newName = uniqid('myfuture-img-avatar-') . "." . $extension;
+  $newPath = IMAGE_DIR . $newName;
 
+  move_uploaded_file($oldPath, $newPath);
 
-
-
-
-
-
+  return $newName;
+}
 
 
 

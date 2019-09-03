@@ -21,28 +21,15 @@ if (isLogged()) {
   header("location: homePost.php");exit;
 }
 
-function saveImageOnPath($data) {
-  $oldPath = $data["tmp_name"];
-  $oldName = $data["name"];
-  $extension = pathinfo($oldName, PATHINFO_EXTENSION);
-
-  $newName = uniqid('myfuture-img-') . "." . $extension;
-  $newPath = IMAGE_DIR . $newName;
-
-  move_uploaded_file($oldPath, $newPath);
-  
-
-}
-
 
 
   if ($_POST) {
     $errors = validateRegistration($_POST);
 
      if (count($errors) == 0) {
-        saveImageOnPath($avatarFile);
        $user = createUser($_POST);
-       $user["avatar"] = $newName;
+        saveImageOnPath($avatarFile);
+       $user["avatarFile"] = $newName;
 
        saveUser($user);
 
