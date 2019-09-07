@@ -20,6 +20,11 @@ class ModifyUsersTable extends Migration
         $table->string('birthday');
         $table->string('userName');
         $table->string('genre');
+        $table->string('email');
+        $table->string('name');
+        $table->string('password');
+        $table->timestamps();
+
 
       });
     }
@@ -39,6 +44,9 @@ class ModifyUsersTable extends Migration
             $table->dropIfExists('birthday');
             $table->dropIfExists('userName');
             $table->dropIfExists('genre');
+            $table->dropIfExists('email');
+            $table->dropIfExists('name');
+            $table->dropIfExists('password');
           });
     }
 }
